@@ -218,6 +218,24 @@ BootLinux (0x1db2c)
 2. **Non-DTBO payload written to `dtbo`**: If a random/non-DTBO image (`magic != 0xd7b7ab1e`) is written directly (e.g., via `dd` or custom recovery), `FUN_0002a788` still returns `0` (`0x2aaa0 -> 0x2ab18`) and `LinuxLoader.efi` still falls back to `0x1e62c`. *(Note: during Odin flashing, `decomp/F_Odin` performs `SecAuthRet` / `SignerVer01`/`SignerVer02` checks when secure download checks apply, which rejects unsigned Odin downloads.)*
 3. **Any valid `dt_table_header` (`0xd7b7ab1e`) written to `dtbo`**: As soon as `magic == 0xd7b7ab1e` and the header passes `0x2a788`, `0x1e4a8` **refuses to run `FUN_0001fb3c`** and enters the DTBO overlay pipeline (`0x1e4ac..0x1e530`). Unless *all* of: (i) the appended DTB passes `FUN_00021624` (`0x1c`), (ii) either `(0x1c150000 & ~DtMatchVal) == 0` OR a `dtbo` entry passes `FUN_000226c4` (`0x1b`), **and** (iii) the base DTB contains `/__symbols__` for `ufdt_apply_overlay` (`0x38924`) to succeed, `BootLinux` returns `EFI_NOT_FOUND` (`0x800000000000000e`), hitting `0x214c: b #0x1b34` in `LinuxLoaderEntry` — **unconditionally forcing the device into Download Mode (`Odin.efi`)**.
 
+### 3.4 Working `dtbo` Configuration (Hardware-Verified)
+
+Even after compiling the base DTB with `DTC_FLAGS += -@` (to emit `/__symbols__`), a stock `a9y18qlte` DTB **still fails Gate A (`FUN_00021624`)** because of `qcom,board-id` cell 1:
+- Stock `sdm660-sec-a9y18qlte-eur-r06.dts` sets `qcom,board-id = <0x8 0x6>` (encoding Samsung `hw_rev = 6` in cell 1).
+- `FUN_0001fb3c` (non-DTBO path) checks `board_hw_rev >= dtb_hw_rev`, so `0x6` works.
+- `FUN_00021888` (`0x21888`, DTBO path `mode = 0x1c`/`0x1b`) only reads the **first** `qcom,board-id` tuple and treats cell 1 as Qualcomm `BoardSubtype` (`FUN_0001d958()`, which is `0` on `SM-A920F`). Any non-zero mismatch (`6 != 0`) triggers `"subtype-id doesnot match"` (`DtMatchVal = 1`).
+
+**Dual-DTB + Overlay Setup (verified on `SM-A920F` for both `boot` and `HeaderVersion == 0` `recovery`):**
+1. **Base `Image.gz-dtb`**: Build DTBs with `DTC_FLAGS += -@`, keep the unmodified `<0x8 0x6>` DTB, and append a second copy patched via `fdtput -t x <dtb> / qcom,board-id 0x8 0x0`:
+   - When `dtbo` is all-zeros, `FUN_0001fb3c` selects `<0x8 0x6>`.
+   - When `dtbo` is active, `FUN_00021624` skips `<0x8 0x6>`, selects `<0x8 0x0>`, and passes it to `ufdt_apply_overlay`.
+2. **Overlay `.dts` (`dtc -@`)**:
+   - Root `/` specifies `/plugin/;`, `qcom,msm-id = <0x13d 0x0>;`, and `qcom,board-id = <0x8 0x0>;`.
+   - Fragments target a label present in `/__symbols__` that also has a `phandle` in the base DTB (e.g., `&soc`, since `/reserved-memory` on `a9y18qlte` lacks a `phandle`), generating `/__fixups__`.
+3. **Container (`mkdtboimg` v0)**: 32-byte big-endian `dt_table_header` (`magic = 0xd7b7ab1e`, `header_size = 0x20`, `dt_entry_size = 0x20`, `dt_entry_count = 1`, `dt_entries_offset = 0x20`, `page_size = 2048`, `version = 0`) + 32-byte `dt_table_entry` (`dt_offset = 0x40`) + compiled `.dtbo`.
+
+On `SM-A920F` (`4.19.325` + OrangeFox `recovery.img` repacked with the same dual-DTB kernel), flashing this `dtbo.img` to `sda19` boots cleanly into both Android and OrangeFox with `androidboot.dtbo_idx=0` in `/proc/cmdline` and overlaid properties present under `/sys/firmware/devicetree/base/`.
+
 ---
 
 ## 4. Complete Kernel `cmdline` Reference
