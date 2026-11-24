@@ -2,7 +2,7 @@
 
 **Target Firmware**: Samsung Galaxy A9 2018 (`SM-A920F`, `a9y18qlte`, SDM660) — `A920FXXS7CVH1`  
 **ImageBase Convention**: All four XBL DXE modules are PE32+ AArch64 (`0xaa64`, Subsystem `11` = `EFI_BOOT_SERVICE_DRIVER`) binaries with `ImageBase = 0x0` and `EntryPoint = 0x1130`, where `VA == RVA == FileOffset` in `extracted/F_XBL/dxe/` and `decomp/XBL_{Muic,Chg,Vib,NpaLdo}/`.  
-**Verification Script**: [`scripts/analyze_xbl_samsung_dxe.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_xbl_samsung_dxe.py)
+**Verification Script**: [`scripts/analyze_xbl_samsung_dxe.py`](../scripts/analyze_xbl_samsung_dxe.py)
 
 ---
 
@@ -12,10 +12,10 @@ Samsung extends Qualcomm's SDM660 XBL UEFI DXE environment with four board-speci
 
 | DXE Module | File Size | SHA-256 (prefix) | Installed Protocol | Protocol GUID | `.text` / `.data` / `.reloc` | Hardware Controlled |
 | --- | --- | --- | --- | --- | --- | --- |
-| [`Muic.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/Muic.efi) | `40,960` B | `abc694a2f3ba49a3...` | `SamsungMuicProtocol` | `2cc73155-a1f9-4c4b-88e2-caf9390e126a` | `0x1000+0x7000` / `0x8000+0x1000` / `0x9000+0x1000` | SM5705 MUIC (`0x25`), S2MM005 CCIC (`0x33`), KTS1620 (`0x22`) |
-| [`Chg.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/Chg.efi) | `49,152` B | `57924ff1bb0dd406...` | `SamsungChargerProtocol` | `3c7596fa-0058-4496-a648-6d14be4023b2` | `0x1000+0x9000` / `0xa000+0x1000` / `0xb000+0x1000` | SM5705 Charger (`0x49`), SM5705 FG (`0x71`), `BATT_THERM` ADC |
-| [`Vib.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/Vib.efi) | `32,768` B | `2f00f0413952e399...` | `SamsungVibratorProtocol` | `aa2e776d-8c9c-4268-998a-8b0a13bf0501` | `0x1000+0x5000` / `0x6000+0x1000` / `0x7000+0x1000` | S2DOS03 (`0x60`) LDO4 (`3.3 V`) Coin DC Motor |
-| [`NpaLdo.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/NpaLdo.efi) | `28,672` B | `04a9c965e07bb22e...` | `SamsungNpaLdoProtocol` | `6c3dbb2c-4354-4f5a-9e2f-40658db24402` | `0x1000+0x4000` / `0x5000+0x1000` / `0x6000+0x1000` | PMIC NPA resource `/pmic/client/api_test` |
+| [`Muic.efi`](../extracted/F_XBL/dxe/Muic.efi) | `40,960` B | `abc694a2f3ba49a3...` | `SamsungMuicProtocol` | `2cc73155-a1f9-4c4b-88e2-caf9390e126a` | `0x1000+0x7000` / `0x8000+0x1000` / `0x9000+0x1000` | SM5705 MUIC (`0x25`), S2MM005 CCIC (`0x33`), KTS1620 (`0x22`) |
+| [`Chg.efi`](../extracted/F_XBL/dxe/Chg.efi) | `49,152` B | `57924ff1bb0dd406...` | `SamsungChargerProtocol` | `3c7596fa-0058-4496-a648-6d14be4023b2` | `0x1000+0x9000` / `0xa000+0x1000` / `0xb000+0x1000` | SM5705 Charger (`0x49`), SM5705 FG (`0x71`), `BATT_THERM` ADC |
+| [`Vib.efi`](../extracted/F_XBL/dxe/Vib.efi) | `32,768` B | `2f00f0413952e399...` | `SamsungVibratorProtocol` | `aa2e776d-8c9c-4268-998a-8b0a13bf0501` | `0x1000+0x5000` / `0x6000+0x1000` / `0x7000+0x1000` | S2DOS03 (`0x60`) LDO4 (`3.3 V`) Coin DC Motor |
+| [`NpaLdo.efi`](../extracted/F_XBL/dxe/NpaLdo.efi) | `28,672` B | `04a9c965e07bb22e...` | `SamsungNpaLdoProtocol` | `6c3dbb2c-4354-4f5a-9e2f-40658db24402` | `0x1000+0x4000` / `0x5000+0x1000` / `0x6000+0x1000` | PMIC NPA resource `/pmic/client/api_test` |
 
 ### 1.1 Common EDK2 Startup & Bit-Banged `GpioI2CLib`
 

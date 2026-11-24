@@ -1,7 +1,7 @@
 # SM-A920F (`a9y18qlte`) `XBL_Loader`, `XBL_Ramdump`, `VerifiedBootDxe`, `TzDxe`, and `bksecapp` TrustZone Architecture
 
 **Target Firmware**: Samsung Galaxy A9 2018 (`SM-A920F`, `a9y18qlte`, SDM660) — `A920FXXS7CVH1` (`SignerVer02`, Signer ID `55622970R`, `2022-08-26`)  
-**Verification Script**: [`scripts/analyze_xbl_loader_bksecapp.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_xbl_loader_bksecapp.py)
+**Verification Script**: [`scripts/analyze_xbl_loader_bksecapp.py`](../scripts/analyze_xbl_loader_bksecapp.py)
 
 ---
 
@@ -9,7 +9,7 @@
 
 ### 1.1 ELF64 Container & Memory Layout
 
-[`xbl.elf`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/xbl.elf) (`2,840,100` bytes, SHA-256 `c5dcec89f2ffa937cbd488c254bccfc1056a1da9425222b6a7c8e5c630514394`) is an `ELFCLASS64` (`EM_AARCH64`) image with `16` program headers, entry point **`0x14021c90`**, an MBN v5 hash/certificate segment (`PHDR[1]`, `cert[0]` `SW_ID = 0000000700000000`, `HW_ID = 3006000000200000` SDM660, `OEM_ID = 0020` Samsung), and a `512`-byte `SignerVer02` footer at `0x2b5424`. In [`xbl_loader.elf`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/xbl_loader.elf), `PHDR[12]` (`UEFI FD` at `0x9fc00000`) is set to `PT_NULL` so Ghidra loads `XBL_Loader`, `XBL_SEC` stubs, and `XBL_Ramdump` cleanly ([`xbl_mbn_metadata.json`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/xbl_mbn_metadata.json)):
+[`xbl.elf`](../extracted/F_XBL/xbl.elf) (`2,840,100` bytes, SHA-256 `c5dcec89f2ffa937cbd488c254bccfc1056a1da9425222b6a7c8e5c630514394`) is an `ELFCLASS64` (`EM_AARCH64`) image with `16` program headers, entry point **`0x14021c90`**, an MBN v5 hash/certificate segment (`PHDR[1]`, `cert[0]` `SW_ID = 0000000700000000`, `HW_ID = 3006000000200000` SDM660, `OEM_ID = 0020` Samsung), and a `512`-byte `SignerVer02` footer at `0x2b5424`. In [`xbl_loader.elf`](../extracted/F_XBL/xbl_loader.elf), `PHDR[12]` (`UEFI FD` at `0x9fc00000`) is set to `PT_NULL` so Ghidra loads `XBL_Loader`, `XBL_SEC` stubs, and `XBL_Ramdump` cleanly ([`xbl_mbn_metadata.json`](../extracted/F_XBL/xbl_mbn_metadata.json)):
 
 | PHDR | Type | File Offset | VAddr / PAddr | FileSz | MemSz | Flags | Component Role |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -99,7 +99,7 @@ Both Samsung vendor SMEM items are populated in **`FUN_140258a4`** (`0x140258a4`
 
 ### 1.4 EDL (`0x01FD3000`), `Shared_IMEM` (`0x146BF000`) Cookies & `XBL_Ramdump`
 
-Cross-referenced with [`uefiplat.cfg`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/uefiplat.cfg):
+Cross-referenced with [`uefiplat.cfg`](../extracted/F_XBL/cfg/uefiplat.cfg):
 
 - **EDL / Dload Register (`0x01FD3000`, `TCSR_BOOT_MISC_DETECT` / `DloadCookieAddr`)**:
   - **Bits `[5:4]` (`0x30`, `DloadCookieValue = 0x10`)**: Checked by `FUN_1402413c` (`(_DAT_01fd3000 & 0x30) != 0`) and cleared by `FUN_140240b0` (`"TCSR reg value 0x%x "`, `_DAT_01fd3000 &= 0xffffffcf`). Set by `FUN_14024154` (`_DAT_01fd3000 |= 0x10`) before reset (`FUN_14030d80(1)`) to request Ramdump/Dload mode.
@@ -171,7 +171,7 @@ Both drivers are `AArch64` (`0xaa64`) PE32+ DXE drivers with `ImageBase = 0x0` (
 
 ### 3.1 Container, Entry Points & `0x138`-Byte IPC Struct
 
-[`bksecapp.elf`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_BKSECAPP/bksecapp.elf) (`242,568` bytes, SHA-256 `6539213ec78f8282fd411eb505f0dd4de20b686ab39f2cf2978806f6468b4680`) is a 32-bit `ELFCLASS32` (`EM_ARM`, Thumb-2 + ARM32 SVC trampolines) QSEE TrustZone applet with `8` PHDRs (`0x0` `.text`, `0x1b000` `.data+.bss`, `0x4e000` `.got`, `0x4f000` `.dynamic`, `0x50000` hash/reloc, `0x51000` MBN v5 with `APP_ID = 0000000000000888`, `SW_ID = 000000000000000C`, and `512`-byte `SignerVer02` footer at `0x3b188`). *Note*: Ghidra loaded `bksecapp.elf` at `ImageBase = 0x10000`, so `Ghidra_VA = ELF_VA + 0x10000` (`RVA == ELF_VA`).
+[`bksecapp.elf`](../extracted/F_BKSECAPP/bksecapp.elf) (`242,568` bytes, SHA-256 `6539213ec78f8282fd411eb505f0dd4de20b686ab39f2cf2978806f6468b4680`) is a 32-bit `ELFCLASS32` (`EM_ARM`, Thumb-2 + ARM32 SVC trampolines) QSEE TrustZone applet with `8` PHDRs (`0x0` `.text`, `0x1b000` `.data+.bss`, `0x4e000` `.got`, `0x4f000` `.dynamic`, `0x50000` hash/reloc, `0x51000` MBN v5 with `APP_ID = 0000000000000888`, `SW_ID = 000000000000000C`, and `512`-byte `SignerVer02` footer at `0x3b188`). *Note*: Ghidra loaded `bksecapp.elf` at `ImageBase = 0x10000`, so `Ghidra_VA = ELF_VA + 0x10000` (`RVA == ELF_VA`).
 
 - **Lifecycle Entry Points**:
   - **CRT0 (`0x0`, ARM32)**: Checks `r0 == 2 && r1 == 1`, initializes stack, and calls QSEE TA runtime loop `0x83e0`.

@@ -2,7 +2,7 @@
 
 **Target**: Samsung Galaxy A9 (2018) `SM-A920F` (`a9y18qlte`, Qualcomm SDM660)  
 **Binary**: `extracted/F/LinuxLoader.efi` (AArch64 PE32+, `ImageBase = 0x0`, `EntryPoint = 0x1000`, `1,490,944` bytes; `VA == RVA == FileOffset`)  
-**Verification Script**: [`scripts/analyze_dtb_cmdline.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_dtb_cmdline.py)
+**Verification Script**: [`scripts/analyze_dtb_cmdline.py`](../scripts/analyze_dtb_cmdline.py)
 
 ---
 
@@ -305,4 +305,4 @@ Every `snprintf` (`FUN_00004814`) site in `FUN_000706bc` was extracted and verif
 
 ## 5. Verification
 
-Running [`scripts/analyze_dtb_cmdline.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_dtb_cmdline.py) against `extracted/F/LinuxLoader.efi` and `decomp/F_LinuxLoader/functions.json` confirms all 42 referenced function RVAs, AArch64 instruction encodings (`0x2148..0x214c`, `0x23f0..0x2400`, `0x1e484..0x1e534`, `0x1ecc0..0x1ece4`, `0x2aa8c..0x2aab8`, `0x216b8..0x2170c`, `0x227a0`), `param` offsets (`0x3f4`, `0x1cc`, `0x1d0`, `0x1dc`), `0x9fa60` verifiedbootstate table, and all `snprintf` cmdline formats (`3` in `FUN_00025d54`, `1` in `FUN_000260b4`, `59` in `FUN_000706bc`).
+Running [`scripts/analyze_dtb_cmdline.py`](../scripts/analyze_dtb_cmdline.py) against `extracted/F/LinuxLoader.efi` and `decomp/F_LinuxLoader/functions.json` confirms all 42 referenced function RVAs, AArch64 instruction encodings (`0x2148..0x214c`, `0x23f0..0x2400`, `0x1e484..0x1e534`, `0x1ecc0..0x1ece4`, `0x2aa8c..0x2aab8`, `0x216b8..0x2170c`, `0x227a0`), `param` offsets (`0x3f4`, `0x1cc`, `0x1d0`, `0x1dc`), `0x9fa60` verifiedbootstate table, and all `snprintf` cmdline formats (`3` in `FUN_00025d54`, `1` in `FUN_000260b4`, `59` in `FUN_000706bc`).

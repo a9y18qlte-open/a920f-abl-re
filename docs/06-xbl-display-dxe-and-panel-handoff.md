@@ -4,7 +4,7 @@
 **Binary**: `extracted/F_XBL/dxe/DisplayDxe.efi` (`266,240` bytes, SHA-256 `bcdf06303b40d809e8c1b459d6afd2af95148c852a75197cbbbed93b0175af54`)  
 **PE32+ Layout**: AArch64 (`0xaa64`), `ImageBase = 0x0`, `EntryPoint = 0x1130` (`VA == RVA == FileOffset`), sections `.text` (`0x1000`–`0x36000`), `.data` (`0x36000`–`0x40000`), `.reloc` (`0x40000`–`0x41000`)  
 **FFS / PDB Path**: FFS GUID `4138022f-06c7-4f79-9c94-7e33b511a4e7` (`FFS offset 0x27f3a0`, `0x41112` bytes); embedded PDB (`0x3f8b4`): `.../Sdm660LA_Core/RELEASE_CLANG38LINUX/AARCH64/QcomPkg/Drivers/DisplayDxe/DisplayDxe/DEBUG/DisplayDxe.dll`  
-**Verification Script**: [`scripts/analyze_xbl_display.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_xbl_display.py)
+**Verification Script**: [`scripts/analyze_xbl_display.py`](../scripts/analyze_xbl_display.py)
 
 ---
 
@@ -205,4 +205,4 @@ During `samsung_panel_select_xml_data` (`0x6890`), `samsung_check_support_panel`
 
 ## 5. Verification
 
-Running [`scripts/analyze_xbl_display.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_xbl_display.py) verifies all PE32+ headers, SHA-256, 12 DEPEX GUIDs, 24 protocol/event GUIDs, 4 installed protocol vtables, `"Display Reserved"` (`0x9D400000`, `0x02400000`), all 25 DT panel entries, `AMS628RF01` & `AMS622MR01` XML tables, `kts1620` GPIOs/pins, MDSS base & clock tables, all cited `DisplayDxe.efi` / `LinuxLoader.efi` RVAs, and UEFI variable strings cleanly with exit code `0`.
+Running [`scripts/analyze_xbl_display.py`](../scripts/analyze_xbl_display.py) verifies all PE32+ headers, SHA-256, 12 DEPEX GUIDs, 24 protocol/event GUIDs, 4 installed protocol vtables, `"Display Reserved"` (`0x9D400000`, `0x02400000`), all 25 DT panel entries, `AMS628RF01` & `AMS622MR01` XML tables, `kts1620` GPIOs/pins, MDSS base & clock tables, all cited `DisplayDxe.efi` / `LinuxLoader.efi` RVAs, and UEFI variable strings cleanly with exit code `0`.

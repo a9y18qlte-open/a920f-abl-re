@@ -3,7 +3,7 @@
 **Target Firmware**: Samsung Galaxy A9 2018 (`SM-A920F`, `a9y18qlte`, SDM660) — `A920FXXS7CVH1`  
 **Build Info (embedded in `LinuxLoader.efi` / `Odin.efi`)**: `Aug 26 2022 19:11:41` (`DEBUG_CLANG35`, `AARCH64`)  
 **ImageBase Convention**: Both `LinuxLoader.efi` and `Odin.efi` are PE32+ AArch64 (`0xaa64`) UEFI applications with `ImageBase = 0x0`, so `VA == RVA == FileOffset` throughout the decompiled Ghidra databases (`decomp/F_LinuxLoader`, `decomp/F_Odin`).  
-**Verification Script**: [`scripts/analyze_uefi_bootflow.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_uefi_bootflow.py)
+**Verification Script**: [`scripts/analyze_uefi_bootflow.py`](../scripts/analyze_uefi_bootflow.py)
 
 ---
 

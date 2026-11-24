@@ -4,9 +4,9 @@ Comparative reverse-engineering report for the Samsung Galaxy A9 (2018) (`a9y18q
 
 | Variant | Region / Market | Build ID | Product Target (`AutoGen.c`) | Build Date (`LinuxLoader`) | Reproducible Script |
 |---|---|---|---|---|---|
-| **`SM-A920F`** (`F`) | Global / Europe (`EUR_XX_GBL0`) | `A920FXXS7CVH1` | `a9y18qlte` | `Aug 26 2022 19:11:41` | [`scripts/diff_variants.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/diff_variants.py) |
-| **`SM-A920N`** (`N`) | South Korea (`KOR_KX_KOR0`) | `A920NKSU5CVG1` | `a9y18qltekx` | `Jul 21 2022 11:32:19` | [`scripts/diff_variants.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/diff_variants.py) |
-| **`SM-A9200`** (`A9200`) | China / Hong Kong (`CHN_CHC_CHN0`) | `A9200ZHU5CZB1` | `a9y18qltechn` | `Mar 17 2026 20:20:53` | [`scripts/diff_variants.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/diff_variants.py) |
+| **`SM-A920F`** (`F`) | Global / Europe (`EUR_XX_GBL0`) | `A920FXXS7CVH1` | `a9y18qlte` | `Aug 26 2022 19:11:41` | [`scripts/diff_variants.py`](../scripts/diff_variants.py) |
+| **`SM-A920N`** (`N`) | South Korea (`KOR_KX_KOR0`) | `A920NKSU5CVG1` | `a9y18qltekx` | `Jul 21 2022 11:32:19` | [`scripts/diff_variants.py`](../scripts/diff_variants.py) |
+| **`SM-A9200`** (`A9200`) | China / Hong Kong (`CHN_CHC_CHN0`) | `A9200ZHU5CZB1` | `a9y18qltechn` | `Mar 17 2026 20:20:53` | [`scripts/diff_variants.py`](../scripts/diff_variants.py) |
 
 > **Address Convention**: Both `LinuxLoader.efi` and `Odin.efi` are PE32+ AArch64 (`0xaa64`) images with `ImageBase = 0x0`, so `VA == RVA == FileOffset` in all Ghidra exports (`decomp/{F,N,A9200}_{LinuxLoader,Odin}`) and extracted binaries (`extracted/{F,N,A9200}`).
 

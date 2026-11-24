@@ -1,8 +1,8 @@
 # SM-A920F (`a9y18qlte`, SDM660) `xbl.elf` — UEFI DXE Architecture, Configs, `QcomBds`, `ResetRuntimeDxe`, and `ButtonsDxe`
 
-This report documents how `xbl.elf` (Samsung Galaxy A9 2018, `SM-A920F` / `a9y18qlte`, firmware build `A920FXXS7CVH1`, SDM660) unpacks and dispatches Qualcomm's EDK2 UEFI DXE environment, parses embedded platform configs, hands off to `abl.elf` ([LinuxLoader.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/LinuxLoader.efi) / [Odin.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/Odin.efi)), encodes/decodes reboot reasons across `gRT->ResetSystem` and PMIC PON spare registers, and maps physical keys/GPIOs/PMIC interrupts into UEFI `EFI_KEY_DATA` scan codes.
+This report documents how `xbl.elf` (Samsung Galaxy A9 2018, `SM-A920F` / `a9y18qlte`, firmware build `A920FXXS7CVH1`, SDM660) unpacks and dispatches Qualcomm's EDK2 UEFI DXE environment, parses embedded platform configs, hands off to `abl.elf` ([LinuxLoader.efi](../extracted/F/LinuxLoader.efi) / [Odin.efi](../extracted/F/Odin.efi)), encodes/decodes reboot reasons across `gRT->ResetSystem` and PMIC PON spare registers, and maps physical keys/GPIOs/PMIC interrupts into UEFI `EFI_KEY_DATA` scan codes.
 
-All binary claims, RVAs, GUIDs, protocol vtables, switch tables, and config values below are verified by [analyze_xbl_bds_reset_keys.py](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_xbl_bds_reset_keys.py) against the unpacked files under [extracted/F_XBL/](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL) and decompiled C under [decomp/](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/decomp). All DXE RVAs assume `ImageBase = 0x0`, `VA == RVA == FileOffset`.
+All binary claims, RVAs, GUIDs, protocol vtables, switch tables, and config values below are verified by [analyze_xbl_bds_reset_keys.py](../scripts/analyze_xbl_bds_reset_keys.py) against the unpacked files under [extracted/F_XBL/](../extracted/F_XBL) and decompiled C under [decomp/](../decomp). All DXE RVAs assume `ImageBase = 0x0`, `VA == RVA == FileOffset`.
 
 ---
 
@@ -10,7 +10,7 @@ All binary claims, RVAs, GUIDs, protocol vtables, switch tables, and config valu
 
 ### 1.1 ELF64, MBN v5, X.509 Certificate Chain & Samsung Signer Footer
 
-Per [xbl_mbn_metadata.json](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/xbl_mbn_metadata.json), [xbl.elf](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/xbl.elf) is a `2,840,100`-byte (`0x2b5624`) `ELFCLASS64` (`EM_AARCH64`) image (`e_entry = 0x14021c90`, `16` program headers, SHA-256 `c5dcec89f2ffa937cbd488c254bccfc1056a1da9425222b6a7c8e5c630514394`):
+Per [xbl_mbn_metadata.json](../extracted/F_XBL/xbl_mbn_metadata.json), [xbl.elf](../extracted/F_XBL/xbl.elf) is a `2,840,100`-byte (`0x2b5624`) `ELFCLASS64` (`EM_AARCH64`) image (`e_entry = 0x14021c90`, `16` program headers, SHA-256 `c5dcec89f2ffa937cbd488c254bccfc1056a1da9425222b6a7c8e5c630514394`):
 
 | Container Component | Offset / VAddr | Size | Key Verified Details |
 |---|---|---|---|
@@ -20,24 +20,24 @@ Per [xbl_mbn_metadata.json](file:///home/thongass000/.gemini/antigravity-cli/scr
 | CA / Root Certs (`certs[1]`, `certs[2]`) | `Seg 1 + 0x857`, `+ 0xcec` | `1173` B, `1165` B | `O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert` (`m.security@samsung.com`) |
 | `XBL_SEC` (`Seg 2`, `PT_LOAD`) | File `0x3000`, VA `0x14699000` | `0x131c0` | Loaded into OCIMEM/TZ region (`flags = 0x5000005`) |
 | `XBL_Loader` (`Seg 3..11`, `PT_LOAD`) | File `0x161c0..0x8d5a0`, VA `0x14015000+` | — | Entry `0x14021c90`, `sbl1_config_table`, DDR/PMIC/hw_rev init |
-| **UEFI FD / Outer FV (`Seg 12`, `PT_LOAD`)** | File `0x8d5a0`, VA **`0x9fc00000`** | `0x1b5800` | EFI Firmware Volume (`_FVH` magic at `Seg 12 + 0x28`), holds `Sec.te` + LZMA-compressed [inner_dxe_fv.bin](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/inner_dxe_fv.bin) |
+| **UEFI FD / Outer FV (`Seg 12`, `PT_LOAD`)** | File `0x8d5a0`, VA **`0x9fc00000`** | `0x1b5800` | EFI Firmware Volume (`_FVH` magic at `Seg 12 + 0x28`), holds `Sec.te` + LZMA-compressed [inner_dxe_fv.bin](../extracted/F_XBL/inner_dxe_fv.bin) |
 | `XBL_Ramdump` (`Seg 13..15`, `PT_LOAD`) | File `0x242da0..0x2b5430`, VA `0x85e35000+` | — | `ramdump` segments |
 | Samsung Footer (`SignerVer02`) | File `0x2b5424` | `512` B | Magic `SignerVer02`, `signer_id = 55622970R`, `build_id = A920FXXS7CVH1`, target `SM-A920F_EUR_XX_GBL0`, `SRPRI18A007`, `20220826192125` |
 
 ### 1.2 `Sec.te` (Terse Executable SEC Phase)
 
-The first FFS file in the Outer FV (`0x9fc00000`) is [Sec.te](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/Sec.te), a `VZ` (`0x5a56`) Terse Executable image XIP-executed in place at `0x9fc00000+`:
+The first FFS file in the Outer FV (`0x9fc00000`) is [Sec.te](../extracted/F_XBL/Sec.te), a `VZ` (`0x5a56`) Terse Executable image XIP-executed in place at `0x9fc00000+`:
 
 - **TE Header (`0x28` B)**: `Machine = 0xaa64` (AArch64), `NumberOfSections = 3`, `Subsystem = 11` (`EFI_BOOT_SERVICE_DRIVER`), `StrippedSize = 0xf60`, `EntryPoint = 0x1000`, `BaseOfCode = 0x1000`, `ImageBase = 0x9fc01000` (giving XIP entry VA `0x9fc01000 + 0x1000 = 0x9fc02000`).
 - **Sections**:
   - `.text`: `VAddr = 0x1000`, `VSize = 0x21000`, `RawPtr = 0x1000`, `RawSize = 0x21000`, `Characteristics = 0x60000020`
   - `.data`: `VAddr = 0x22000`, `VSize = 0x3000`, `RawPtr = 0x22000`, `RawSize = 0x3000`, `Characteristics = 0xc0000040`
   - `.reloc`: `VAddr = 0x25000`, `VSize = 0x1000`, `RawPtr = 0x25000`, `RawSize = 0x1000`, `Characteristics = 0x42000040`
-- **Role**: `Sec.te` initializes CPU vectors (`0x9FF8C000`), MMU page tables (`0x9FF8D000`), UEFI stack (`0x9FF90000`), SEC heap (`0x9FF00000`), parses [uefiplat.cfg](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/uefiplat.cfg) (offset `0x1b954`) to publish the `UEFI Config Lib` HOB (`bedaeabc-5e70-4d66-9733-213d072b9d04`) and memory/register HOBs, decompresses the LZMA Outer FV section into `FV Region` (`0x9F800000`), and hands off to `DxeCore` (`"Loading DxeCore"` at file `0x1bff3` / VA `0x9fc1cff3`).
+- **Role**: `Sec.te` initializes CPU vectors (`0x9FF8C000`), MMU page tables (`0x9FF8D000`), UEFI stack (`0x9FF90000`), SEC heap (`0x9FF00000`), parses [uefiplat.cfg](../extracted/F_XBL/cfg/uefiplat.cfg) (offset `0x1b954`) to publish the `UEFI Config Lib` HOB (`bedaeabc-5e70-4d66-9733-213d072b9d04`) and memory/register HOBs, decompresses the LZMA Outer FV section into `FV Region` (`0x9F800000`), and hands off to `DxeCore` (`"Loading DxeCore"` at file `0x1bff3` / VA `0x9fc1cff3`).
 
-### 1.3 Apriori DXE Dispatch Sequence ([apriori_order.json](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/apriori_order.json))
+### 1.3 Apriori DXE Dispatch Sequence ([apriori_order.json](../extracted/F_XBL/cfg/apriori_order.json))
 
-The DXE apriori list specifies **82** GUIDs (`index 0..81`). Of those, **64** modules are present in [inner_dxe_fv.bin](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/inner_dxe_fv.bin) (`ui_name != null`, unpacked in [extracted/F_XBL/dxe/](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe)), while **18** GUIDs have `ui_name: null` (stripped from the retail FV: indices `32`, `48`, `50..54`, `56..57`, `63`, `71..73`, `76..77`, `79..81` — which includes absent Qualcomm debug/charger apps such as `QcomChargerApp` / `QcomChargerDxe`). Key stages in the dispatch order:
+The DXE apriori list specifies **82** GUIDs (`index 0..81`). Of those, **64** modules are present in [inner_dxe_fv.bin](../extracted/F_XBL/inner_dxe_fv.bin) (`ui_name != null`, unpacked in [extracted/F_XBL/dxe/](../extracted/F_XBL/dxe)), while **18** GUIDs have `ui_name: null` (stripped from the retail FV: indices `32`, `48`, `50..54`, `56..57`, `63`, `71..73`, `76..77`, `79..81` — which includes absent Qualcomm debug/charger apps such as `QcomChargerApp` / `QcomChargerDxe`). Key stages in the dispatch order:
 
 | Apriori Index | Module (`ui_name`) | GUID | Role in Boot / Handoff |
 |---|---|---|---|
@@ -55,9 +55,9 @@ The DXE apriori list specifies **82** GUIDs (`index 0..81`). Of those, **64** mo
 | `64..70` | `TsensDxe`, `Muic`, `Chg`, `DisplayDxe`, `TzDxe`, `LimitsDxe`, `MdtpDxe` | `f09ad92e-...` .. `409d636e-...` | Samsung `Muic`/`Chg`, Display splash/panel, TZ SCM, MDTP |
 | `74..78` | `HashDxe`, `RngDxe`, `MpPowerDxe` | `3adf8dda-...` .. `88abf42e-...` | Crypto & multi-core power |
 
-### 1.4 Embedded Configuration Files ([extracted/F_XBL/cfg/](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg))
+### 1.4 Embedded Configuration Files ([extracted/F_XBL/cfg/](../extracted/F_XBL/cfg))
 
-1. **[uefiplat.cfg](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/uefiplat.cfg)** (`Version = 3`, `MaxMemoryRegions = 64`):
+1. **[uefiplat.cfg](../extracted/F_XBL/cfg/uefiplat.cfg)** (`Version = 3`, `MaxMemoryRegions = 64`):
    - `[MemoryMap]` (**14 regions**):
      - `0x80000000` (`0x05800000`): `"Kernel"` (`Reserv`, `WRITE_BACK_XN`)
      - `0x86000000` (`0x00200000`): `"SMEM"` (`Reserv`, `UNCACHED_UNBUFFERED_XN`)
@@ -78,36 +78,36 @@ The DXE apriori list specifies **82** GUIDs (`index 0..81`). Of those, **64** mo
      - `TzAppsRegnAddr = 0x86D00000`, `TzAppsRegnSize = 0x02200000`
      - `DefaultChargerApp = "QcomChargerApp"`, `DefaultBDSBootApp = "LinuxLoader"`, `EnableLogFsSyncInRetail = 0x0`
 
-2. **[BDS_Menu.cfg](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/BDS_Menu.cfg)**:
+2. **[BDS_Menu.cfg](../extracted/F_XBL/cfg/BDS_Menu.cfg)**:
    Defines Qualcomm's engineering `[BDS Menu]` (`Indent = 1`, `FirstRow = 1`):
    - `Exit`, `SecurityToggleApp` (`/SecureBootEnable`, `/SecureBootDisable`), `DebugPolicyToggleApp` (`/DebugPolicyEnable`, `/DebugPolicyDisable`, `/ConfigPpiDisplay`), `RPMBProvision` (`-Prompt`), `Shell` (`-nomap -nostartup`), `Cmd` (`"BootUSBFirst"`, `"Reboot"`, `"edl"`), `UsbfnMsdApp` (`"MassStorage"`), nested `Menu` submenus (`Usb_Menu.cfg`, `Pmic_Menu.cfg`, `Uefi_Menu.cfg`), and `Fastboot` (`App = Fastboot`, `FvGuid = "046fae99-cf2e-49ed-a6a8-a1488b7e80d3"` — the `ABOOT FV` GUID). *Note: none of these menu items or `.cfg` submenus are parsed by retail `QcomBds.efi`.*
 
-3. **[SecParti.cfg](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/SecParti.cfg)** (`Version = 0x0100`):
+3. **[SecParti.cfg](../extracted/F_XBL/cfg/SecParti.cfg)** (`Version = 0x0100`):
    Maps TZ secure variable/storage partitions for `SecurityDxe` / TZ:
    - `[RPMB.128KB]` (`DevId = 3`): `qcom.tz.uefisecapp` `AppPartitionId = 3` (`RT_S_NV`, `160` sectors), `AppPartitionId = 4` (`RT_NS_NV`, `48` sectors); `qcom.tz.winsecapp` `AppPartitionId = 5` (`fTPM`, `40` sectors).
    - `[RPMB.256KB]` (`DevId = 3`): same IDs with `184`, `208`, and `80` sectors respectively.
    - `[GPT]` (`DevId = 8`, `PartitionGuid = "8BF4B4F0 BAAE CF4E 9142 5DC30CDC3E77"`): `AppPartitionId = 1` (`BS_S_NV`, `65536` bytes), `AppPartitionId = 2` (`BS_NS_NV`, `131072` bytes).
 
-4. **[QcomChargerCfg.cfg](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/QcomChargerCfg.cfg)** (`CfgVersion = 25`):
+4. **[QcomChargerCfg.cfg](../extracted/F_XBL/cfg/QcomChargerCfg.cfg)** (`CfgVersion = 25`):
    Qualcomm reference `QcomChargerConfig_VbattTh_Sdm660.cfg`:
    - `[PlatformCommon]`: `ChargingTermCurrent = 200` mA, `BatteryIdTolerance = 8%`, `DebugBoardBatteryIdMin/Max = 2000..14000` Ω, `RegularBatteryIdMin/Max = 15000..137000` Ω, `SmartBatteryIdMin/Max = 240000..450000` Ω, `UnknownBatteryBehavior = 3` (Regular charging), `DebugBoardBehavior = 2` (Boot to HLOS), `BootToHLOSThresholdInMv = 3600`, `EmergencyShutdownVbatt = 3200`, `DispSignOfLifeMaxThresholdMv = 3700`, `SocBasedBoot = FALSE`, `LoadBatteryProfile = FALSE`, `EnableChargerWdog = 1`, `DeviceSkinHotInC = 70`/`80`, `ChargerHotInC = 80`/`90`, `TsensHighTemp = 85`/`Extreme = 90`/`Low = 75`, `FgCondRestart = TRUE`, `VBattEstDiffThreshold = 30` mV, `ChargerLedConfig = 1`.
    - `[PlatformMTP]`: `ChgFvMax = 4350` mV, `ChgFccMax = 2000` mA, JEITA limits `-20 / 0 / 10 / 45 / 60 / 70` °C, `VBtEmpty = 2850` mV.
    - `[PlatformQRD]`: `ChgFvMax = 4400` mV, `ChgFccMax = 3000` mA, JEITA limits `-20 / 0 / 10 / 45 / 55 / 60` °C, `VBtEmpty = 2850` mV.
 
-5. **[BATTERY.PROVISION](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/BATTERY.PROVISION)**:
+5. **[BATTERY.PROVISION](../extracted/F_XBL/cfg/BATTERY.PROVISION)**:
    Three `PMI8998GUI - 2.0.0.54` fuel-gauge SRAM profile blocks (`Profile_Revision = 24`, SRAM addresses `018..04F`, byte offsets `0..3`):
    - `Ascent_with_connector_3450mAh_averaged_MasterSlave_Jan6th2017`: `Batt_id = 60000` Ω, `Float_Voltage = 4350` mV, `Nom_Batt_capacity = 3450` mAh, `Therm_B = 3435`, `Checksum = 96AC`.
    - `QRD8997_ST1031GA_3000mAh_averaged_MasterSlave_Jan10th2017`: `Batt_id = 68000` Ω, `Float_Voltage = 4400` mV, `Nom_Batt_capacity = 3000` mAh, `Therm_B = 3380`, `Checksum = D299`.
    - `Itech_B00826LF_3000mAh_ver1660_averaged_MasterSlave_Jan10th2017`: `Batt_id = 100000` Ω, `Float_Voltage = 4350` mV, `Nom_Batt_capacity = 3000` mAh, `Therm_B = 3435`, `Checksum = FB8F`.
 
-6. **[tracer_event.cfg](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/cfg/tracer_event.cfg)** (`[SW Event Information]`):
+6. **[tracer_event.cfg](../extracted/F_XBL/cfg/tracer_event.cfg)** (`[SW Event Information]`):
    Nine QDSS SW trace events: `QDSS_INITIALIZED` (`1`), `TRACER_EVENT_TEST` (`0`), `TRACER_EVENT_TEST2` (`0`), `CLOCK_EVENT_INIT` (`1`), `CLOCK_EVENT_CLOCK_STATUS` (`1`), `CLOCK_EVENT_CLOCK_FREQ` (`1`), `CLOCK_EVENT_SOURCE_STATUS` (`1`), `CLOCK_EVENT_SOURCE_FREQ` (`1`), `CLOCK_EVENT_SOURCE_CONFIG` (`1`).
 
 ---
 
 ## 2. `QcomBds.efi` Boot & ABL Handoff
 
-[QcomBds.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/QcomBds.efi) (`277` decompiled functions in [decomp/XBL_QcomBds/](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/decomp/XBL_QcomBds)) implements `gEfiBdsArchProtocolGuid` (`665e3ff6-46cc-11d4-9a38-0090273fc14d` at `0x111a0`).
+[QcomBds.efi](../extracted/F_XBL/dxe/QcomBds.efi) (`277` decompiled functions in [decomp/XBL_QcomBds/](../decomp/XBL_QcomBds)) implements `gEfiBdsArchProtocolGuid` (`665e3ff6-46cc-11d4-9a38-0090273fc14d` at `0x111a0`).
 
 ### 2.1 Initialization & `BdsEntry` (`0x1ce8`)
 
@@ -127,7 +127,7 @@ The DXE apriori list specifies **82** GUIDs (`index 0..81`). Of those, **64** mo
 4. **ABL Launch (`0xbee8` -> `0xc8b4`)**:
    - Reads config `"DefaultBDSBootApp"` -> `"LinuxLoader"`.
    - Prints `UEFI Total : %d ms` (`0xb51c`).
-   - **Unconditionally** calls `LaunchAppFromGuidedFv` (`FUN_0000c8b4(&DAT_00011160, "LinuxLoader", NULL)`), where `0x11160` is **`046fae99-cf2e-49ed-a6a8-a1488b7e80d3`** (`"ABOOT FV"` mapped at `0x9FA00000`, `2 MiB`, containing `abl.elf`'s [LinuxLoader.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/LinuxLoader.efi) and [Odin.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/Odin.efi)).
+   - **Unconditionally** calls `LaunchAppFromGuidedFv` (`FUN_0000c8b4(&DAT_00011160, "LinuxLoader", NULL)`), where `0x11160` is **`046fae99-cf2e-49ed-a6a8-a1488b7e80d3`** (`"ABOOT FV"` mapped at `0x9FA00000`, `2 MiB`, containing `abl.elf`'s [LinuxLoader.efi](../extracted/F/LinuxLoader.efi) and [Odin.efi](../extracted/F/Odin.efi)).
 
 ### 2.3 Retail Gating of `BDS_Menu.cfg`, `EnableShell`, and `QcomChargerApp`
 
@@ -138,7 +138,7 @@ The DXE apriori list specifies **82** GUIDs (`index 0..81`). Of those, **64** mo
 
 ## 3. `ResetRuntimeDxe.efi` (`QcomResetReasonProtocol` + `gRT->ResetSystem`)
 
-[ResetRuntimeDxe.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/ResetRuntimeDxe.efi) (`180` decompiled functions in [decomp/XBL_ResetRuntimeDxe/](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/decomp/XBL_ResetRuntimeDxe)) installs both `gEfiResetArchProtocolGuid` (`27cfac88-46cc-11d4-9a38-0090273fc14d` at `0x90b0`) and `QcomResetReasonProtocol` (`a022155a-4828-4535-a499-11f15240b91b` at `0x90c0`).
+[ResetRuntimeDxe.efi](../extracted/F_XBL/dxe/ResetRuntimeDxe.efi) (`180` decompiled functions in [decomp/XBL_ResetRuntimeDxe/](../decomp/XBL_ResetRuntimeDxe)) installs both `gEfiResetArchProtocolGuid` (`27cfac88-46cc-11d4-9a38-0090273fc14d` at `0x90b0`) and `QcomResetReasonProtocol` (`a022155a-4828-4535-a499-11f15240b91b` at `0x90c0`).
 
 ### 3.1 Protocol Layout, Initialization & PMIC/SPMI Hardware Path
 
@@ -155,7 +155,7 @@ The DXE apriori list specifies **82** GUIDs (`index 0..81`). Of those, **64** mo
   - `GetResetReason` (`0x3074`) locates `PmicPonProtocol` (`9ba45b66-efa4-441c-a3e4-ed2224786be2` at `0x9120`), calls `+0x20` (`GetSpareReg(0, 3, &val)`), and shifts `val >> 1` (7 bits `[7:1]`). It returns string `L"UNKNOWN"` (`0x7a1a`) when the 7-bit code is `0`, or `L"RESET_PARAM"` (`0x7a02`) when non-zero.
   - `ClearResetReason` (`0x31b4`) calls `FUN_0000349c(0)`.
   - `FUN_0000349c(code)` locates `9ba45b66-...` and calls `+0x28` (`SetSpareReg(0, 3, code << 1, 0xfe)`).
-  - Verified in [PmicDxe.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/PmicDxe.efi) vtable `0x2f638` (`Revision = 0x10009`): `+0x20` (`0x3174` -> `0xfe0c`) and `+0x28` (`0x31a4` -> `0xfe74`) compute `add w1, w20/w21, #0x88c`. For `SpareReg = 3` (`XVDD_RB_SPARE`), the physical PMIC SPMI register is **`0x88c + 3 = 0x88f`** (`PM_PON_XVDD_RB_SPARE`, bits `[7:1]`).
+  - Verified in [PmicDxe.efi](../extracted/F_XBL/dxe/PmicDxe.efi) vtable `0x2f638` (`Revision = 0x10009`): `+0x20` (`0x3174` -> `0xfe0c`) and `+0x28` (`0x31a4` -> `0xfe74`) compute `add w1, w20/w21, #0x88c`. For `SpareReg = 3` (`XVDD_RB_SPARE`), the physical PMIC SPMI register is **`0x88c + 3 = 0x88f`** (`PM_PON_XVDD_RB_SPARE`, bits `[7:1]`).
 
 ### 3.2 `gRT->ResetSystem` (`0x15bc` -> `0x2f60`) Dispatch: `RESET_PARAM`, `EDL`, and PMIC Reset
 
@@ -201,7 +201,7 @@ Notice a key architectural boundary: **`ResetRuntimeDxe.efi` does not store a ta
 
 ## 4. `ButtonsDxe.efi` (`EfiSimpleTextInputExProtocol`) & Key Mapping
 
-[ButtonsDxe.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F_XBL/dxe/ButtonsDxe.efi) (`114` decompiled functions in [decomp/XBL_ButtonsDxe/](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/decomp/XBL_ButtonsDxe)) polls hardware keys via PMIC protocols and exposes UEFI keystrokes through `ConSplitterDxe`.
+[ButtonsDxe.efi](../extracted/F_XBL/dxe/ButtonsDxe.efi) (`114` decompiled functions in [decomp/XBL_ButtonsDxe/](../decomp/XBL_ButtonsDxe)) polls hardware keys via PMIC protocols and exposes UEFI keystrokes through `ConSplitterDxe`.
 
 ### 4.1 Installed Protocols & Physical Key/PMIC/GPIO Matrix
 
@@ -220,7 +220,7 @@ Notice a key architectural boundary: **`ResetRuntimeDxe.efi` does not store a ta
 ### 4.2 Polling, Bitmask Encoding & ABL Key Combination Matrix
 
 - **`ConvertEfiKeyCode` (`0x39ac`)**: Whenever the button-pressed mask is non-zero and edge state `[0x7410]` permits, ORs the active `ScanCode` bits (`0x01 | 0x02 | 0x40 | 0x80 | 0x20`) into `EFI_KEY_DATA.Key.ScanCode` (`uint16`, leaving `UnicodeChar = 0`) and pushes the 4-byte `EFI_INPUT_KEY` into the driver's ring buffer (`0x2d20`).
-- **Consumed in [LinuxLoader.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/LinuxLoader.efi) (`0x26c20` -> `0x12e10`)**:
+- **Consumed in [LinuxLoader.efi](../extracted/F/LinuxLoader.efi) (`0x26c20` -> `0x12e10`)**:
   `FUN_00026c20` polls `ConIn->ReadKeyStroke` / `ReadKeyStrokeEx`, returning `ScanCode`:
 
   | `ScanCode` (`w8`) | Physical Key Combo | `0x12e10` Branch Target | Resulting Boot / UI Action |
@@ -235,7 +235,7 @@ Notice a key architectural boundary: **`ResetRuntimeDxe.efi` does not store a ta
   | `0x01` (at prompt) | `Vol+` | `0x12ff8` -> `0x130d8` | **Confirm Download Mode -> launch `Odin.efi`** (`2`) |
   | `0x02` (at prompt) | `Vol-` | `0x13000` -> `0x13008` | **Cancel Download Mode -> normal reboot (`0x14638`)** |
 
-- **Consumed in [Odin.efi](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/Odin.efi) (`0x1fb7c`)**:
+- **Consumed in [Odin.efi](../extracted/F/Odin.efi) (`0x1fb7c`)**:
   - `0x01f4c` / `0x01f7c` / `0x0f77c` / `0x0fe7c` / `0x0ff24` call `FUN_0001fb7c` (key reader).
   - `0x0fed4` (`0x0ff34: cmp w8, #0x80`) checks **Power (`0x80`)** inside the Odin UI screen handler.
   - `0x0fff4` (`0x10028: cmp w9, #1`, `0x10030: cmp w9, #2`) checks **`Vol+` (`0x01`)** and **`Vol-` (`0x02`)** for confirmation/navigation prompts inside Odin.

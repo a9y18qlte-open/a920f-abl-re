@@ -3,17 +3,17 @@
 This report documents the Samsung Odin (Download Mode) USB protocol, PIT/GPT partition management, Download Mode status banner sources, and the Verified Boot / AVB / Samsung `Sec_Auth_*` / `Sec_Emc` verification pipelines in the Qualcomm SDM660 Android Bootloader (`abl`) for **Samsung Galaxy A9 2018 (`SM-A920F`, codename `a9y18qlte`, firmware `A920FXXS7CVH1`, SW_ID `000000070000001C`)**.
 
 All RVAs are file offsets equal to virtual addresses (`ImageBase = 0x0`) in the unpacked PE32+ UEFI images:
-- [`Odin.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/Odin.efi): `1,159,168` bytes, `.text` `0x1000..0x78000`, `.data` `0x78000..0x118000`, `.reloc` `0x118000..0x11b000` (`SHA-256: 96a77ec846ee258002b721ccb94e629f298862010b8f0890f59940dd0a19f5c8`)
-- [`LinuxLoader.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/LinuxLoader.efi): `1,490,944` bytes, `.text` `0x1000..0x9f000`, `.data` `0x9f000..0x169000`, `.reloc` `0x169000..0x16c000` (`SHA-256: a67caa9a8d7d4b7f8cfdd5bd847b252b384e77b77bf3c7b770d1366559245b25`)
+- [`Odin.efi`](../extracted/F/Odin.efi): `1,159,168` bytes, `.text` `0x1000..0x78000`, `.data` `0x78000..0x118000`, `.reloc` `0x118000..0x11b000` (`SHA-256: 96a77ec846ee258002b721ccb94e629f298862010b8f0890f59940dd0a19f5c8`)
+- [`LinuxLoader.efi`](../extracted/F/LinuxLoader.efi): `1,490,944` bytes, `.text` `0x1000..0x9f000`, `.data` `0x9f000..0x169000`, `.reloc` `0x169000..0x16c000` (`SHA-256: a67caa9a8d7d4b7f8cfdd5bd847b252b384e77b77bf3c7b770d1366559245b25`)
 
-Constants, jump tables, partition tables, UI strings, and cryptographic key hashes in this document are verified by [`analyze_odin_protocol.py`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/scripts/analyze_odin_protocol.py).
+Constants, jump tables, partition tables, UI strings, and cryptographic key hashes in this document are verified by [`analyze_odin_protocol.py`](../scripts/analyze_odin_protocol.py).
 
 ---
 
 ## 1. `Odin.efi` Lifecycle & USB Transport (`OdinMain.c`)
 
 ### 1.1 Entry & Initialization Flow
-1. **UEFI Entry (`_ModuleEntryPoint` @ `0x1000`)**: [`001000_entry.c`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/decomp/F_Odin/funcs/001000_entry.c) initializes EDK2 libraries via `FUN_000010ac` (`ProcessLibraryConstructorList`), invokes `FUN_00001574` -> `FUN_00001dec` (`OdinMain`), and exits through `FUN_00001444`.
+1. **UEFI Entry (`_ModuleEntryPoint` @ `0x1000`)**: [`001000_entry.c`](../decomp/F_Odin/funcs/001000_entry.c) initializes EDK2 libraries via `FUN_000010ac` (`ProcessLibraryConstructorList`), invokes `FUN_00001574` -> `FUN_00001dec` (`OdinMain`), and exits through `FUN_00001444`.
 2. **`OdinMain` (`FUN_00001dec` @ `0x1dec`)**:
    - Logs build timestamp (`Aug 26 2022 19:11:41`) and initializes stack canary entropy (`FUN_0000a188`).
    - Calls `FUN_00001634` (`UsbDeviceInit`) to bring up USB transport and register Odin commands.
@@ -184,7 +184,7 @@ Both `LinuxLoader.efi` (`Sec_Auth_Kernel.c` `0x6ba4`, `Sec_Auth_Odin.c` `0x80c8`
    - Recognizes magic **`"SignerVer01"`** (`1`) or **`"SignerVer02"`** (`2`). In `SignerVer02`, extracts the image release/build tag (`"fac"`, `"mrk"`, `"usr"`, `"eng"`, `"knx"` via `0x14900` / `0x0ced0` at `puVar4 + 0x12` and `puVar4 + 0x13`) and stores the `0x100`-byte `SignerVer02` block at `DAT_0010c16d` (`Odin.efi`) / `DAT_001580b8` (`LinuxLoader.efi`).
 2. **RSA-2048 Signature & `SEANDROIDENFORCE`**:
    - Verifies SHA-256 of the image body (`param_2 - 0x100`) using `QcomHashOrVbProtocol` / `QcomSecurityHashProtocol` against the PKCS#1 v1.5 RSA-2048 decrypted signature using the **identical embedded `294`-byte (`0x126`) DER `SubjectPublicKeyInfo` key**:
-     - [`Odin.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/Odin.efi) @ **`0x5b1dc`** == [`LinuxLoader.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/LinuxLoader.efi) @ **`0x7a05b`** (`SHA-256: a36d209b23ff5b7d9ece24bce8ff0fdbd01806643342781be51f95d1df6aa4b0`).
+     - [`Odin.efi`](../extracted/F/Odin.efi) @ **`0x5b1dc`** == [`LinuxLoader.efi`](../extracted/F/LinuxLoader.efi) @ **`0x7a05b`** (`SHA-256: a36d209b23ff5b7d9ece24bce8ff0fdbd01806643342781be51f95d1df6aa4b0`).
    - On `LinuxLoader.efi` kernel boot (`0x6ba4`), additionally invokes **`0x008dc8`** (`bksecapp` command `0xc` `[TIMA trusted boot]: Boot-time measurement`), extracts `boot`/`kernel` build numbers (`puVar5[0x27]`, `puVar5[0x28]`), and hashes the RSA key into `puVar5 + 0x29` when authenticated. (`SEANDROIDENFORCE` is handled/logged as part of Samsung kernel/recovery footer conventions around `Sec_Auth_Kernel.c`.)
 3. **Partition Policy Table (`Odin.efi` @ `0x79ba8`)**:
    - `37` named partition entries (`stride 0x40`, terminated by empty string entry `[37]` at `0x7a4e8`):
@@ -213,7 +213,7 @@ After signature verification (`AUTHENTICATE`, reason `1`), Enhanced Check (`ENHA
 Samsung's Emergency/Engineering Mode (`Sec_Emc.c`) permits authorized service tokens stored in the **`steady`** partition to unlock `ENG`, `CUSTOM`, or `KNOX TEST` binary acceptance without tripping normal unsigned-binary rejection:
 1. Reads the EMC block from `steady` (`"ENGRES0001"` / `"FUSE"` marker).
 2. Verifies token signature and certificate sizes (`0x100`-byte RSA-2048 signature header at `+0x2f` short check, cert length `1..0xf41` bytes at `+0x1bf`, DER X.509 cert at `+0x1c1`).
-3. Parses and decrypts the certificate signature against the embedded **EMC Root RSA-2048 public key** (`294`-byte DER SPKI: [`Odin.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/Odin.efi) @ **`0x5a670`** == [`LinuxLoader.efi`](file:///home/thongass000/.gemini/antigravity-cli/scratch/a920f-abl-re/extracted/F/LinuxLoader.efi) @ **`0x795f0`**, `SHA-256: cde6a83f2e567c4611e215bd773e9d86621d15ca45904c5449fba6f9f4ceec06`), verifying the SHA-256 digest (accepting `0x20` raw or `0x33` DigestInfo-prefixed RSA output) and checking that the X.509 Common Name (`CN`) via `0x15aec` equals **`"EngineeringMode"`**.
+3. Parses and decrypts the certificate signature against the embedded **EMC Root RSA-2048 public key** (`294`-byte DER SPKI: [`Odin.efi`](../extracted/F/Odin.efi) @ **`0x5a670`** == [`LinuxLoader.efi`](../extracted/F/LinuxLoader.efi) @ **`0x795f0`**, `SHA-256: cde6a83f2e567c4611e215bd773e9d86621d15ca45904c5449fba6f9f4ceec06`), verifying the SHA-256 digest (accepting `0x20` raw or `0x33` DigestInfo-prefixed RSA output) and checking that the X.509 Common Name (`CN`) via `0x15aec` equals **`"EngineeringMode"`**.
 4. Extracts the leaf `X.509` public key (`0x34374` -> `0x387f8` -> `0x33d00`) and verifies the SHA-256 signature over the `0xb2`-byte token body (`0x31df4`).
 5. Calls `FUN_00018594` (`T-U` device binding check) to validate the device's `DID` and unlock bits (`+0xb9`):
    - `bit 3` (`(b >> 3) & 1`): **CUSTOM allowed** (`DAT_0010c27c = 0x10`)
