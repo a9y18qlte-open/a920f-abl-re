@@ -1,0 +1,256 @@
+{
+  "elf_class": "ELFCLASS64",
+  "elf_machine": "EM_AARCH64",
+  "elf_entry": "0x14021c90",
+  "e_phoff": 64,
+  "e_phentsize": 56,
+  "e_phnum": 16,
+  "total_size": 2840100,
+  "total_sha256": "c5dcec89f2ffa937cbd488c254bccfc1056a1da9425222b6a7c8e5c630514394",
+  "segments": [
+    {
+      "index": 0,
+      "type": "PT_NULL",
+      "offset": "0x0",
+      "vaddr": "0x0",
+      "paddr": "0x0",
+      "filesz": "0x3c0",
+      "memsz": "0x0",
+      "flags": "0x7000000",
+      "sha256": "cad21c15ec28c428dd0f06c6746da7fdec399aad806650075b6579d24d460955"
+    },
+    {
+      "index": 1,
+      "type": "PT_NULL",
+      "offset": "0x1000",
+      "vaddr": "0x9fdb6000",
+      "paddr": "0x9fdb6000",
+      "filesz": "0x1b28",
+      "memsz": "0x2000",
+      "flags": "0x2200000",
+      "sha256": "f9d0ed3e2f61e718f2570e604f53f6c8590f514bc4ae9a068c7c59931d66c03b"
+    },
+    {
+      "index": 2,
+      "type": "PT_LOAD",
+      "offset": "0x3000",
+      "vaddr": "0x14699000",
+      "paddr": "0x14699000",
+      "filesz": "0x131c0",
+      "memsz": "0x131c0",
+      "flags": "0x5000005",
+      "sha256": "1119f4c557942342d90aaba1a1cd14d05c528d645a61e86c9abe12d91371b342"
+    },
+    {
+      "index": 3,
+      "type": "PT_LOAD",
+      "offset": "0x161c0",
+      "vaddr": "0x14015000",
+      "paddr": "0x14015000",
+      "filesz": "0x516d0",
+      "memsz": "0x516d0",
+      "flags": "0x5",
+      "sha256": "ea77fe545f7289863b83beb01f3c5e9332963cc516ceb62bede0986d20ee067e"
+    },
+    {
+      "index": 4,
+      "type": "PT_LOAD",
+      "offset": "0x67890",
+      "vaddr": "0x14077000",
+      "paddr": "0x14077000",
+      "filesz": "0x0",
+      "memsz": "0x3000",
+      "flags": "0x6",
+      "sha256": null
+    },
+    {
+      "index": 5,
+      "type": "PT_LOAD",
+      "offset": "0x67890",
+      "vaddr": "0x1407a000",
+      "paddr": "0x1407a000",
+      "filesz": "0x81bc",
+      "memsz": "0x81bc",
+      "flags": "0x6",
+      "sha256": "ff7fe45bad6c7eb466eb8d4a10ee34d132a359587fcd5faa90bfb711f5d3c008"
+    },
+    {
+      "index": 6,
+      "type": "PT_LOAD",
+      "offset": "0x6fa50",
+      "vaddr": "0x14085000",
+      "paddr": "0x14085000",
+      "filesz": "0x0",
+      "memsz": "0x14000",
+      "flags": "0x6",
+      "sha256": null
+    },
+    {
+      "index": 7,
+      "type": "PT_LOAD",
+      "offset": "0x6fa50",
+      "vaddr": "0x85e00000",
+      "paddr": "0x85e00000",
+      "filesz": "0x0",
+      "memsz": "0x276a0",
+      "flags": "0x6",
+      "sha256": null
+    },
+    {
+      "index": 8,
+      "type": "PT_LOAD",
+      "offset": "0x6fa50",
+      "vaddr": "0x146ae000",
+      "paddr": "0x146ae000",
+      "filesz": "0x2e30",
+      "memsz": "0x2e30",
+      "flags": "0x5",
+      "sha256": "a7b6dcc537bfaf4b3f2afcd569a6e341b20e1d5a0695448dfcd95541b886cb87"
+    },
+    {
+      "index": 9,
+      "type": "PT_LOAD",
+      "offset": "0x72880",
+      "vaddr": "0x146b1000",
+      "paddr": "0x146b1000",
+      "filesz": "0xb64",
+      "memsz": "0xb64",
+      "flags": "0x6",
+      "sha256": "e3d814b63fc29aba16c24995cf90c0286a3a7df658769860c902173da93dd182"
+    },
+    {
+      "index": 10,
+      "type": "PT_LOAD",
+      "offset": "0x733f0",
+      "vaddr": "0x14099000",
+      "paddr": "0x14099000",
+      "filesz": "0x1a1a8",
+      "memsz": "0x1a1a8",
+      "flags": "0x7",
+      "sha256": "33148926653d35cee4830e72cd0b1bc6ae5d6d906add341bd0854023f6d92e94"
+    },
+    {
+      "index": 11,
+      "type": "PT_LOAD",
+      "offset": "0x8d5a0",
+      "vaddr": "0x146b2000",
+      "paddr": "0x146b2000",
+      "filesz": "0x0",
+      "memsz": "0x48ec",
+      "flags": "0x6",
+      "sha256": null
+    },
+    {
+      "index": 12,
+      "type": "PT_LOAD",
+      "offset": "0x8d5a0",
+      "vaddr": "0x9fc00000",
+      "paddr": "0x9fc00000",
+      "filesz": "0x1b5800",
+      "memsz": "0x1b5800",
+      "flags": "0x7",
+      "sha256": "d3a4fccd1955afd4e85544766d16820ab71dab409257f77344fce54ab9d73568"
+    },
+    {
+      "index": 13,
+      "type": "PT_LOAD",
+      "offset": "0x242da0",
+      "vaddr": "0x85e35000",
+      "paddr": "0x85e35000",
+      "filesz": "0x6add8",
+      "memsz": "0x6add8",
+      "flags": "0x5",
+      "sha256": "cbcfce8a74dfff00a8ae9964a21258367c9a7539c3880283ed9651ff1dcd182c"
+    },
+    {
+      "index": 14,
+      "type": "PT_LOAD",
+      "offset": "0x2adb80",
+      "vaddr": "0x85ebc000",
+      "paddr": "0x85ebc000",
+      "filesz": "0x78a4",
+      "memsz": "0x43d0c",
+      "flags": "0x6",
+      "sha256": "b25a6f5873e01213324d4c1ac0e1d163f1cf535349c727f79d9af5433dad36e9"
+    },
+    {
+      "index": 15,
+      "type": "PT_LOAD",
+      "offset": "0x2b5430",
+      "vaddr": "0x85eab000",
+      "paddr": "0x85eab000",
+      "filesz": "0x0",
+      "memsz": "0xd750",
+      "flags": "0x6",
+      "sha256": null
+    }
+  ],
+  "mbn": {
+    "segment_offset": "0x1000",
+    "segment_size": "0x1b28",
+    "header_words_hex": [
+      "0x5",
+      "0x5",
+      "0x0",
+      "0x0",
+      "0x1b00",
+      "0x200",
+      "0xffffffff",
+      "0x100",
+      "0xffffffff",
+      "0x1800"
+    ],
+    "version": 5,
+    "code_size": "0x200",
+    "sig_size": "0x100",
+    "cert_chain_size": "0x1800",
+    "certs": [
+      {
+        "len": 1327,
+        "sha256": "8a1a0db11d90d64d9ff2770cb633a16d6fc04cb02dd25868cb8172369c3a44fe",
+        "subject": "C = US, CN = SecTools Test User, L = San Diego, O = SecTools, ST = California, OU = 01 0000000700000000 SW_ID, OU = 02 3006000000200000 HW_ID, OU = 04 0020 OEM_ID, OU = 05 00000228 SW_SIZE, OU = 06 0000 MODEL_ID, OU = 07 0001 SHA256, OU = 03 0000000000000000 DEBUG, OU = 13 0001 IN_USE_SOC_HW_VERSION",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "01",
+        "notBefore": "Aug 26 10:18:43 2022 GMT",
+        "notAfter": "Aug 21 10:18:43 2042 GMT",
+        "offset_in_seg1": "0x328"
+      },
+      {
+        "len": 1173,
+        "sha256": "5e3f0eb9e896314b9898c10c0f2cbf39751ede6203c6a4cf4dcb799474433703",
+        "subject": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "05",
+        "notBefore": "Sep 18 08:27:36 2018 GMT",
+        "notAfter": "Sep 13 08:27:36 2038 GMT",
+        "offset_in_seg1": "0x857"
+      },
+      {
+        "len": 1165,
+        "sha256": "5cc39a5d2ee1f4f5f6e71139ada2509d6b680c253319130140ed9097bc9f9fc3",
+        "subject": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "D31E82F895DFA8C0",
+        "notBefore": "Sep 18 08:27:36 2018 GMT",
+        "notAfter": "Oct 18 08:27:36 2018 GMT",
+        "offset_in_seg1": "0xcec"
+      }
+    ]
+  },
+  "samsung_signer_footer": {
+    "offset": "0x2b5424",
+    "size": 512,
+    "magic": "SignerVer02",
+    "signer_id": "55622970R",
+    "build_id": "A920FXXS7CVH1",
+    "tail_strings": [
+      "20220826192125",
+      "SM-A920F_EUR_XX_GBL0",
+      "SRPRI18A007",
+      "SRPRI18A007",
+      "xbl.elf",
+      "<pLZ",
+      "~n](q@"
+    ]
+  }
+}

@@ -1,0 +1,2780 @@
+[
+  {
+    "guid": "fc510ee7-ffdc-11d4-bd41-0080c73c8881",
+    "ui_name": null,
+    "ffs_type": "0x2",
+    "ffs_offset": "0x78",
+    "ffs_size": "0x53c",
+    "depex_hex": null,
+    "file": "cfg/apriori.bin"
+  },
+  {
+    "guid": "d6a2cb7f-6a18-4e2f-b43b-9920a733700a",
+    "ui_name": "DxeCore",
+    "ffs_type": "0x5",
+    "ffs_offset": "0x5b8",
+    "ffs_size": "0x23030",
+    "depex_hex": null,
+    "file": "dxe/DxeCore.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1840",
+      "size": 143360,
+      "sha256": "9822eaba6ea676cf84c7aedacf3cead9f3e4bf2965a2100ab89a14ba581a8f25",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x1e000",
+          "raw_off": "0x1000",
+          "raw_size": "0x1e000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x1f000",
+          "vsize": "0x3000",
+          "raw_off": "0x1f000",
+          "raw_size": "0x3000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x22000",
+          "vsize": "0x1000",
+          "raw_off": "0x22000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "b8d9777e-d72a-451f-9bdb-bafb52a68415",
+    "ui_name": "ArmCpuDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x235e8",
+    "ffs_size": "0xb03c",
+    "depex_hex": "0608",
+    "file": "dxe/ArmCpuDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 45056,
+      "sha256": "7b08bcce022238e6a814c7192043838a831d5e3ac90f5ca5381abd89b613c0f7",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x8000",
+          "raw_off": "0x1000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "b601f8c4-43b7-4784-95b1-f4226cb40cee",
+    "ui_name": "RuntimeDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x2e628",
+    "ffs_size": "0x703e",
+    "depex_hex": "0608",
+    "file": "dxe/RuntimeDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "d4b23c464822d546220d23e6583198011f9d068e78552fb24a7f2e85c27d621b",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "5e0eae60-eaed-4d75-b8bf-edbbaabc3f09",
+    "ui_name": "SecurityDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x35668",
+    "ffs_size": "0x1a038",
+    "depex_hex": null,
+    "file": "dxe/SecurityDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 106496,
+      "sha256": "b9dc81867954076c6e10009856e3810387de20c53333d21589e468922bcd3de0",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x16000",
+          "raw_off": "0x1000",
+          "raw_size": "0x16000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x17000",
+          "vsize": "0x2000",
+          "raw_off": "0x17000",
+          "raw_size": "0x2000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x19000",
+          "vsize": "0x1000",
+          "raw_off": "0x19000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "32c71e68-83a8-46ed-aed1-094e71b12057",
+    "ui_name": "SecRSADxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x4f6a0",
+    "ffs_size": "0x9034",
+    "depex_hex": null,
+    "file": "dxe/SecRSADxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "b7461bbc958738dd1d3e23058ea2c5bfded92ef3e8449b4b7bcbbd0dd0ef694c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "c2f9a4f5-f7b4-43e7-ba99-5ea804cc103a",
+    "ui_name": "ASN1X509Dxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x586d8",
+    "ffs_size": "0x9038",
+    "depex_hex": null,
+    "file": "dxe/ASN1X509Dxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "54cfbea7ce1e6a358021c707aa5ff5dd458468b104585616cfb2ab05a5047c5c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "a25f5839-4d55-428f-8f0b-5ce1d565f53e",
+    "ui_name": "VerifiedBootDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x61710",
+    "ffs_size": "0xe048",
+    "depex_hex": "0608",
+    "file": "dxe/VerifiedBootDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 57344,
+      "sha256": "ea66a9126ff41fc53e1e226ef102364c57e8f3483ed413b3cd29cf66d8033e4f",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xb000",
+          "raw_off": "0x1000",
+          "raw_size": "0xb000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xc000",
+          "vsize": "0x1000",
+          "raw_off": "0xc000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xd000",
+          "vsize": "0x1000",
+          "raw_off": "0xd000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "6925fad3-e243-4b69-ad61-3f978c8abc60",
+    "ui_name": "TzDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x6f758",
+    "ffs_size": "0x11044",
+    "depex_hex": "02215b4e965964d2118e3900a0c969723b08",
+    "file": "dxe/TzDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 69632,
+      "sha256": "799f8fef6dc2c1493d5d4114887e19747b87eb3c499ebe27c5b3f3c36e0aca32",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xe000",
+          "raw_off": "0x1000",
+          "raw_size": "0xe000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xf000",
+          "vsize": "0x1000",
+          "raw_off": "0xf000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x10000",
+          "vsize": "0x1000",
+          "raw_off": "0x10000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "409d636e-8dbb-46df-ae8f-d8d69f0a5a2f",
+    "ui_name": "MdtpDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x807a0",
+    "ffs_size": "0xe030",
+    "depex_hex": null,
+    "file": "dxe/MdtpDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 57344,
+      "sha256": "b799c5625f5cf5060ade23a9ea66e7c77eac96d9c245f53607b52a5857091ed6",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xa000",
+          "raw_off": "0x1000",
+          "raw_size": "0xa000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xb000",
+          "vsize": "0x2000",
+          "raw_off": "0xb000",
+          "raw_size": "0x2000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xd000",
+          "vsize": "0x1000",
+          "raw_off": "0xd000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "f099d67f-71ae-4c36-b2a3-dceb0eb2b7d8",
+    "ui_name": "WatchdogTimer",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x8e7d0",
+    "ffs_size": "0x7054",
+    "depex_hex": "02b3ccba26426fd411bce70080c73c888108",
+    "file": "dxe/WatchdogTimer.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "6453c785ae247154629383d3f1cf13c2a68a5a9338d5d7664eea2f3fe9a343ca",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "42857f0a-13f2-4b21-8a23-53d3f714b840",
+    "ui_name": "CapsuleRuntimeDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x95828",
+    "ffs_size": "0x805c",
+    "depex_hex": "0218f841646263444eb5707dba31dd245308",
+    "file": "dxe/CapsuleRuntimeDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "c39732271f65dd62673bfa1d75ccaeb7c00eb6199e868826237453ef3a834e2c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "d93ce3d8-a7eb-4730-8c8e-cc466a9ecc3c",
+    "ui_name": "ReportStatusCodeRouterRuntimeDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x9d888",
+    "ffs_size": "0x806a",
+    "depex_hex": "0608",
+    "file": "dxe/ReportStatusCodeRouterRuntimeDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "ab31ff17d2ef645808ea69c6476cb606caf8d56e6dab7170436e3ce4d388624c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "6c2004ef-4e0e-4be4-b14c-340eb4aa5891",
+    "ui_name": "StatusCodeHandlerRuntimeDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xa58f8",
+    "ffs_size": "0x9070",
+    "depex_hex": "0236292186760ec841a03a2af2fc1c39e208",
+    "file": "dxe/StatusCodeHandlerRuntimeDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "1f160220ced9fc0b9f12b418fcece6ab851cd03fc6727aefb8fa80cf50b3505e",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "02b01ad5-7e59-43e8-a6d8-238180613a5a",
+    "ui_name": "EmuVariableRuntimeDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xae968",
+    "ffs_size": "0xa054",
+    "depex_hex": "0608",
+    "file": "dxe/EmuVariableRuntimeDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 40960,
+      "sha256": "82bdaa3e8366f529fc6bbff8459e1bd921c2972ae37f9d6dec3fac25266127b2",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x7000",
+          "raw_off": "0x1000",
+          "raw_size": "0x7000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "37795ba0-e1cf-4ed5-bd8b-16df6bcb1e1a",
+    "ui_name": "EmbeddedMonotonicCounter",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xb89c0",
+    "ffs_size": "0x705a",
+    "depex_hex": "0608",
+    "file": "dxe/EmbeddedMonotonicCounter.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "101a9aa5bb6890f005886fd3b8d4d6a3f7182ad9d0cb79c3f17414fbb1b47303",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "857a8741-0eec-43bd-9482-27d14ed47d72",
+    "ui_name": "SimpleTextInOutSerial",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xbfa20",
+    "ffs_size": "0x7054",
+    "depex_hex": "0608",
+    "file": "dxe/SimpleTextInOutSerial.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "2be3ec79c3ebd9741e3dc4c59f9a449f6ab573b74df04c5ce1de02c732f852d4",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "3ae17db7-3cc5-4b89-9304-9549211057ef",
+    "ui_name": "ResetRuntimeDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xc6a78",
+    "ffs_size": "0xb048",
+    "depex_hex": "0608",
+    "file": "dxe/ResetRuntimeDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 45056,
+      "sha256": "091e4fff6fd1b81ea5f674ba5c6ab38486230dbd63a1be6b77673f0707376718",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x8000",
+          "raw_off": "0x1000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "b336f62d-4135-4a55-ae4e-4971bbf0885d",
+    "ui_name": "RealTimeClock",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xd1ac0",
+    "ffs_size": "0x8044",
+    "depex_hex": "0608",
+    "file": "dxe/RealTimeClock.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "14a91a9dfe863672c50c33d17846421cc76e6b9c102f95863837a08be0457600",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "4c6e0267-c77d-410d-8100-1495911a989d",
+    "ui_name": "MetronomeDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xd9b08",
+    "ffs_size": "0x7042",
+    "depex_hex": "0608",
+    "file": "dxe/MetronomeDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "a410bfa149c6b9b3abafd9266b93d3eeb448c0864ced51f455ed7ee0c61e1a36",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "79e4a61c-ed73-4312-94fe-e3e7563362a9",
+    "ui_name": "PrintDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xe0b50",
+    "ffs_size": "0x903a",
+    "depex_hex": "0608",
+    "file": "dxe/PrintDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "d997c018e821fc3344a2a626cc0345596914b39ba0f8f36106f9a4cb3fdf95f7",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "9b680fce-ad6b-4f3a-b60b-f59899003443",
+    "ui_name": "DevicePathDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xe9b90",
+    "ffs_size": "0x10044",
+    "depex_hex": "0608",
+    "file": "dxe/DevicePathDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 65536,
+      "sha256": "c6f6b87933c6ac98a27710bf4e121fecc785b968f9bae6d6f8fd2a09d1a58369",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xd000",
+          "raw_off": "0x1000",
+          "raw_size": "0xd000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xe000",
+          "vsize": "0x1000",
+          "raw_off": "0xe000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xf000",
+          "vsize": "0x1000",
+          "raw_off": "0xf000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "51ccf399-4fdf-4e55-a45b-e123f84d456a",
+    "ui_name": "ConPlatformDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0xf9bd8",
+    "ffs_size": "0x803e",
+    "depex_hex": null,
+    "file": "dxe/ConPlatformDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "8986204f7e4a6bb7f0d4f720658c84791271c6adffe185576075a5713f0dd05d",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "408edcec-cf6d-477c-a5a8-b4844e3de281",
+    "ui_name": "ConSplitterDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x101c18",
+    "ffs_size": "0xc03e",
+    "depex_hex": null,
+    "file": "dxe/ConSplitterDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 49152,
+      "sha256": "e65af8b0894cf8e099f1a02145e90fa1d8e9e26702dc7c13257ca395e7f6d646",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x9000",
+          "raw_off": "0x1000",
+          "raw_size": "0x9000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xb000",
+          "vsize": "0x1000",
+          "raw_off": "0xb000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "cccb0c28-4b24-11d5-9a5a-0090273fc14d",
+    "ui_name": "GraphicsConsoleDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x10dc58",
+    "ffs_size": "0xb046",
+    "depex_hex": null,
+    "file": "dxe/GraphicsConsoleDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 45056,
+      "sha256": "daf97412e59ba85dd0519041b6b9b337f1e9a7ae2e46e5bd332dc8710b60b595",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x7000",
+          "raw_off": "0x1000",
+          "raw_size": "0x7000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x8000",
+          "vsize": "0x2000",
+          "raw_off": "0x8000",
+          "raw_size": "0x2000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "348c4d62-bfbd-4882-9ece-c80bb1c4783b",
+    "ui_name": "HiiDatabase",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x118ca0",
+    "ffs_size": "0x20040",
+    "depex_hex": "0608",
+    "file": "dxe/HiiDatabase.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 131072,
+      "sha256": "22d54298173771bed813e639203943ed02bbcb03080e59fe14bbd3097a96480a",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x1d000",
+          "raw_off": "0x1000",
+          "raw_size": "0x1d000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x1e000",
+          "vsize": "0x1000",
+          "raw_off": "0x1e000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x1f000",
+          "vsize": "0x1000",
+          "raw_off": "0x1f000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "ed15ffd5-bc96-4107-9118-95366600188e",
+    "ui_name": "FontDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x138ce0",
+    "ffs_size": "0x906c",
+    "depex_hex": "027469d90faa23dc4cb9cb98d17750322a0272c19fefb2a19346b3276d32fc41604202d7727e5850cc794f8209ca291fc1a10f030308",
+    "file": "dxe/FontDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "9a955c16a23f809276bbb92371ce682fa16a3d5640b4991109928f5a5c82b33e",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "90a49afd-422f-08ae-9611-e788d3804845",
+    "ui_name": "EnvDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x141d50",
+    "ffs_size": "0xf036",
+    "depex_hex": "0608",
+    "file": "dxe/EnvDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 61440,
+      "sha256": "7fe59a6cd4d1d4942b0cac2970fff8410de8aa0d4ea22b21f5098c5d8b27e10e",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xc000",
+          "raw_off": "0x1000",
+          "raw_size": "0xc000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xd000",
+          "vsize": "0x1000",
+          "raw_off": "0xd000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xe000",
+          "vsize": "0x1000",
+          "raw_off": "0xe000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "de371f7c-dec4-4d21-adf1-593abcc15882",
+    "ui_name": "ArmGicDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x150d88",
+    "ffs_size": "0x804c",
+    "depex_hex": "02b1ccba26426fd411bce70080c73c888108",
+    "file": "dxe/ArmGicDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "6aee5bbf9e09c7f6069051860e4aab4baccedbb889f017b8ee5a15420a8bf00d",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "49ea041e-6752-42ca-b0b1-7344fe2546b7",
+    "ui_name": "ArmTimerDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x158dd8",
+    "ffs_size": "0x7050",
+    "depex_hex": "02eab390283d054316ad0cd64808da3ff108",
+    "file": "dxe/ArmTimerDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "1230c8e19437522b618a467fbea753b2265941f411d1a82bf9ad4c85f7ac7a53",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "10e193df-9966-44e7-b17c-59dd831e20fc",
+    "ui_name": "ChipInfo",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x15fe28",
+    "ffs_size": "0x905a",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a3027cde619e2799284f9f3d320705d818010308",
+    "file": "dxe/ChipInfo.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "b4c4205eaa00b59947133876efcf1ade3a15a2b682293c339f71e87531770d3b",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "7942a7eb-b7d5-4e2e-b908-831e4de55b58",
+    "ui_name": "GlinkDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x168e88",
+    "ffs_size": "0xc03a",
+    "depex_hex": "0608",
+    "file": "dxe/GlinkDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 49152,
+      "sha256": "cdfc5acd218506e4f382623097931ebc87adff043b7f876caa76cf06cf12f58d",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x8000",
+          "raw_off": "0x1000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x9000",
+          "vsize": "0x2000",
+          "raw_off": "0x9000",
+          "raw_size": "0x2000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xb000",
+          "vsize": "0x1000",
+          "raw_off": "0xb000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "f541d663-4a48-40aa-aabf-ff158ccae34c",
+    "ui_name": "SmemDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x174ec8",
+    "ffs_size": "0x8038",
+    "depex_hex": "0608",
+    "file": "dxe/SmemDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "22fa4f7b0817aa0b0be950af071006a5e5d8886ba56c65f98e3f65f5bc2f41a2",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "e43128a8-8692-42b6-8afa-676158578d18",
+    "ui_name": "ULogDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x17cf00",
+    "ffs_size": "0x12038",
+    "depex_hex": "0608",
+    "file": "dxe/ULogDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 73728,
+      "sha256": "d7e60143ab12767c8bb9d64d436aa0fae3c80bfee7b6b75763ababde9e0e7470",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xf000",
+          "raw_off": "0x1000",
+          "raw_size": "0xf000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x10000",
+          "vsize": "0x1000",
+          "raw_off": "0x10000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x11000",
+          "vsize": "0x1000",
+          "raw_off": "0x11000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "cb29f4d1-7f37-4692-a416-93e82e219711",
+    "ui_name": "NpaDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x18ef38",
+    "ffs_size": "0x18036",
+    "depex_hex": "0608",
+    "file": "dxe/NpaDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 98304,
+      "sha256": "6de4a3229e5095c198c997e55793031a5f2c316631c4ecd8c7acc83d98bed41a",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x14000",
+          "raw_off": "0x1000",
+          "raw_size": "0x14000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x15000",
+          "vsize": "0x2000",
+          "raw_off": "0x15000",
+          "raw_size": "0x2000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x17000",
+          "vsize": "0x1000",
+          "raw_off": "0x17000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "6b38f7b4-ad98-40e9-9093-aca2b5a253c4",
+    "ui_name": "DiskIoDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x1a6f70",
+    "ffs_size": "0x8034",
+    "depex_hex": null,
+    "file": "dxe/DiskIoDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "cabb432d88a74388a5bee32b47514a6b2b672ffd113943a2be8f62c26d99654a",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "1fa1f39e-feff-4aae-bd7b-38a070a3b609",
+    "ui_name": "PartitionDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x1aefa8",
+    "ffs_size": "0xb03a",
+    "depex_hex": null,
+    "file": "dxe/PartitionDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 45056,
+      "sha256": "1973035c7168c5ca15ffdb23d3ad324739f8e6a848a2d4c54725062e424657b6",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x8000",
+          "raw_off": "0x1000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "961578fe-b6b7-44c3-af35-6bc705cd2b1f",
+    "ui_name": "Fat",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x1b9fe8",
+    "ffs_size": "0xf028",
+    "depex_hex": null,
+    "file": "dxe/Fat.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 61440,
+      "sha256": "4ad064bcd660b149b38ea47d81a2ce45d6c48ff5d467c08c4e7f6e777694f503",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xc000",
+          "raw_off": "0x1000",
+          "raw_size": "0xc000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xd000",
+          "vsize": "0x1000",
+          "raw_off": "0xd000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xe000",
+          "vsize": "0x1000",
+          "raw_off": "0xe000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "cd3bafb6-50fb-4fe8-8e4e-ab74d2c1a600",
+    "ui_name": "EnglishDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x1c9010",
+    "ffs_size": "0x7036",
+    "depex_hex": null,
+    "file": "dxe/EnglishDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "f1bf45a8415677c3c95cb9751ec0ebfc7bfadf2f1a564267477b717a076b1e62",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "907125c0-a5f1-11e3-a3fe-a3198b49350c",
+    "ui_name": "FvSimpleFileSystem",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x1d0048",
+    "ffs_size": "0xa046",
+    "depex_hex": null,
+    "file": "dxe/FvSimpleFileSystem.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 40960,
+      "sha256": "3e3c2956a47f410c22bc434c5883843bb0fba7b1d01485ff9a94e682d4630c74",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x7000",
+          "raw_off": "0x1000",
+          "raw_size": "0x7000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "8e9bd160-b184-11df-94e2-0800200c9a66",
+    "ui_name": "DALSys",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x1da090",
+    "ffs_size": "0x28046",
+    "depex_hex": "02d0c7e5f439d2cb47aacd7f66ef76323808",
+    "file": "dxe/DALSys.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 163840,
+      "sha256": "c349c026f01438f4738548cd050e9a548ca2268e50bd3348b43362f62bafefd7",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x16000",
+          "raw_off": "0x1000",
+          "raw_size": "0x16000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x17000",
+          "vsize": "0xf000",
+          "raw_off": "0x17000",
+          "raw_size": "0xf000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x26000",
+          "vsize": "0x2000",
+          "raw_off": "0x26000",
+          "raw_size": "0x2000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "4db5dea6-5302-4d1a-8a82-677a683b0d29",
+    "ui_name": "ClockDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x2020d8",
+    "ffs_size": "0x1e05a",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a302690476b00c977a48a4b528db7b45cef10308",
+    "file": "dxe/ClockDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 122880,
+      "sha256": "f2d35e15cb5c143502dc6508ffb9634b6c26ff5e000da668fa5ffc9bcf13772f",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x14000",
+          "raw_off": "0x1000",
+          "raw_size": "0x14000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x15000",
+          "vsize": "0x8000",
+          "raw_off": "0x15000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x1d000",
+          "vsize": "0x1000",
+          "raw_off": "0x1d000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "af9763a2-033b-4109-8e17-56a98d380c92",
+    "ui_name": "HWIODxeDriver",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x220138",
+    "ffs_size": "0x8054",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a308",
+    "file": "dxe/HWIODxeDriver.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "46d9c4700a0156278a128ddfbe25d5cebd35edf7e7f4d2a30919840d3e97fa94",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "04de8591-d2b3-4077-bbbe-b12070094eb6",
+    "ui_name": "I2C",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x228190",
+    "ffs_size": "0xb074",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a302e6fa1a245f886c4fa7eac28eab79c3e50218ec9aadf07b09489e963012309f3df702b3ccba26426fd411bce70080c73c888103030308",
+    "file": "dxe/I2C.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 45056,
+      "sha256": "1ae498ac1a6bc9c2d9f29ef39eb07a558953fbc41f5a9eccad505fb6bd65199f",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x8000",
+          "raw_off": "0x1000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "7a32bd23-f735-4f57-aa1a-447d2fe3be0d",
+    "ui_name": "SPI",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x233208",
+    "ffs_size": "0xb074",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a302e6fa1a245f886c4fa7eac28eab79c3e50218ec9aadf07b09489e963012309f3df702b3ccba26426fd411bce70080c73c888103030308",
+    "file": "dxe/SPI.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 45056,
+      "sha256": "8ccddbc94ddc4626610cc7236ef210c5d6cf23d91f90e05debfb7dcb2daf94f4",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x8000",
+          "raw_off": "0x1000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "2a7b4bef-80cd-49e1-b473-374ba4d673fc",
+    "ui_name": "SPMI",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x23e280",
+    "ffs_size": "0x8032",
+    "depex_hex": "0608",
+    "file": "dxe/SPMI.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "dfa9b248a8a2bc43471a11c10edc74993f78ee564b3d50297e26e7b922e6153c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "f10f76db-42c1-533f-34a8-69be24653110",
+    "ui_name": "SdccDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x2462b8",
+    "ffs_size": "0x19058",
+    "depex_hex": "02e6fa1a245f886c4fa7eac28eab79c3e502b3ccba26426fd411bce70080c73c88810308",
+    "file": "dxe/SdccDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 102400,
+      "sha256": "94b40db6393d265b6d82bac7bb8fac2ee4ff30e9b7a1228826510d7e5d50ce78",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x14000",
+          "raw_off": "0x1000",
+          "raw_size": "0x14000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x15000",
+          "vsize": "0x3000",
+          "raw_off": "0x15000",
+          "raw_size": "0x3000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x18000",
+          "vsize": "0x1000",
+          "raw_off": "0x18000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "0d35cd8e-97ea-4f9a-96af-0f0d89f76567",
+    "ui_name": "UFSDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x25f310",
+    "ffs_size": "0x17046",
+    "depex_hex": "02d0c7e5f439d2cb47aacd7f66ef76323808",
+    "file": "dxe/UFSDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 94208,
+      "sha256": "9d5b2877734214975d1bc99dfa968681d5ed032d748edbdcd4124c4640c63076",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x12000",
+          "raw_off": "0x1000",
+          "raw_size": "0x12000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x13000",
+          "vsize": "0x3000",
+          "raw_off": "0x13000",
+          "raw_size": "0x3000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x16000",
+          "vsize": "0x1000",
+          "raw_off": "0x16000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "8681cc5a-0df6-441e-b4b8-e915c538f067",
+    "ui_name": "DALTLMM",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x276358",
+    "ffs_size": "0x9048",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a308",
+    "file": "dxe/DALTLMM.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "1033dfc3c1c078d37f3452102a3c34beea3b90d713d3afcaca403d8feff913cf",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "4138022f-06c7-4f79-9c94-7e33b511a4e7",
+    "ui_name": "DisplayDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x27f3a0",
+    "ffs_size": "0x41112",
+    "depex_hex": "02455c7a15b221c543ba7c822fee5fe59902690476b00c977a48a4b528db7b45cef1024dea30ce8fc706469c3b11efedcf6e87022df8bfc1926cfb488355c7fb4218a4ea024fcc66a96cee4d42a7628ed3b5a4a501020a8084465527dc4eb4437f8ceb3239d302289e63b76bc0f0479a1335eeba3b51f80265e2e255b2cddf4688a5600bedef9c620218ec9aadf07b09489e963012309f3df702e6fa1a245f886c4fa7eac28eab79c3e502b1e87ab2103e074dab5ceb9a6dc6fa8f026b305ffa7df4c44aa47d882f8204ec30030303030303030303030308",
+    "file": "dxe/DisplayDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 266240,
+      "sha256": "bcdf06303b40d809e8c1b459d6afd2af95148c852a75197cbbbed93b0175af54",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x35000",
+          "raw_off": "0x1000",
+          "raw_size": "0x35000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x36000",
+          "vsize": "0xa000",
+          "raw_off": "0x36000",
+          "raw_size": "0xa000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x40000",
+          "vsize": "0x1000",
+          "raw_off": "0x40000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "b105211b-bbbd-4add-a3b0-d1cf4a52154c",
+    "ui_name": "PlatformInfoDxeDriver",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x2c04b8",
+    "ffs_size": "0x7064",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a308",
+    "file": "dxe/PlatformInfoDxeDriver.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "a85eedd7117e92288027cfb3b8b063a813d2bdba975d87fa9bdb7ea390d30698",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "5bd181db-0487-4f1a-ae73-820e165611b3",
+    "ui_name": "ButtonsDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x2c7520",
+    "ffs_size": "0x9096",
+    "depex_hex": "02c1777438c769d2118e3900a0c969723b02455c7a15b221c543ba7c822fee5fe599024418e99a7defca4990340822fb1a5d9302665ba49ba4ef1c44a3e4ed2224786be20218ec9aadf07b09489e963012309f3df70303030308",
+    "file": "dxe/ButtonsDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 36864,
+      "sha256": "f9b822541534278bb82094889de75f04adb64d263c8c27766dd98ed0739b38ad",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x6000",
+          "raw_off": "0x1000",
+          "raw_size": "0x6000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "5776232e-082d-4b75-9a0e-fe1d13f7a5d9",
+    "ui_name": "PmicDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x2d05b8",
+    "ffs_size": "0x32058",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a3026b305ffa7df4c44aa47d882f8204ec300308",
+    "file": "dxe/PmicDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 204800,
+      "sha256": "47329f6a22603a9421eb0c18588acb7b8c010bcaf50a08bbc2f92bc0271dfdf7",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x2e000",
+          "raw_off": "0x1000",
+          "raw_size": "0x2e000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x2f000",
+          "vsize": "0x2000",
+          "raw_off": "0x2f000",
+          "raw_size": "0x2000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x31000",
+          "vsize": "0x1000",
+          "raw_off": "0x31000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "5a5cb8ca-9382-4e0c-b383-77fb517cd9eb",
+    "ui_name": "AdcDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x302610",
+    "ffs_size": "0xa056",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a3026b305ffa7df4c44aa47d882f8204ec300308",
+    "file": "dxe/AdcDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 40960,
+      "sha256": "455b800b2d85fd9b6dd263082de04b250811a2d343fe701980d3484844ef7fe9",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x7000",
+          "raw_off": "0x1000",
+          "raw_size": "0x7000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "f09ad92e-485c-9cdb-3e05-3385c38f94cc",
+    "ui_name": "TsensDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x30c668",
+    "ffs_size": "0x704a",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a308",
+    "file": "dxe/TsensDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "66a7a97cbc22f47d1065eba675b8f19d07a77c508c304a0f5718e9b39ded92b3",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "f09ad92e-4e91-490f-ab99-e69939b840b2",
+    "ui_name": "LimitsDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x3136b8",
+    "ffs_size": "0xb034",
+    "depex_hex": null,
+    "file": "dxe/LimitsDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 45056,
+      "sha256": "390ad1ab51c36343821b06c8e55f85562f56c2d41e07d2814f07aacf36be056c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x8000",
+          "raw_off": "0x1000",
+          "raw_size": "0x8000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "88abf42e-efa7-4d72-a9c8-8b29acdcf64f",
+    "ui_name": "MpPowerDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x31e6f0",
+    "ffs_size": "0x703e",
+    "depex_hex": "0608",
+    "file": "dxe/MpPowerDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "b5df8855e578a8d01df3e5a7b654b315477338f39bf60ad9bcaaff1d2a8e756c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "94f8a6a7-dc34-4101-88c1-99179cceae83",
+    "ui_name": "UsbfnDwc3Dxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x325730",
+    "ffs_size": "0x1715e",
+    "depex_hex": "02ab31a01843b41a4da5c00c09261e9f7102ad5db976661e984d9ce7b294d959689502455c7a15b221c543ba7c822fee5fe59902f63f5e66cc46d4119a380090273fc14d02b1ccba26426fd411bce70080c73c888102b2ccba26426fd411bce70080c73c8881027270a91ddcbd304b99f172a0b56fff2a0287accf27cc46d4119a380090273fc14d0288accf27cc46d4119a380090273fc14d02e1b4dfb72f059f4487be9818fc91b73302e32364a41746f149b9ffd1bfa911583902b3ccba26426fd411bce70080c73c88810218f841646263444eb5707dba31dd245302e268561e8184d411bcf10080c73c888102f53f5e66cc46d4119a380090273fc14d02d0c7e5f439d2cb47aacd7f66ef76323803030303030303030303030303030308",
+    "file": "dxe/UsbfnDwc3Dxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 94208,
+      "sha256": "572a5f0704d2397eb759acd3173462f2eddd85a3d2d1d6385e8ca440ec7c5e38",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x14000",
+          "raw_off": "0x1000",
+          "raw_size": "0x14000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x15000",
+          "vsize": "0x1000",
+          "raw_off": "0x15000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x16000",
+          "vsize": "0x1000",
+          "raw_off": "0x16000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "5af77f10-90df-4e7e-8325-a17ec09d5443",
+    "ui_name": "UsbMsdDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x33c890",
+    "ffs_size": "0xc03c",
+    "depex_hex": "0608",
+    "file": "dxe/UsbMsdDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 49152,
+      "sha256": "f63c5a93d7147c61e8c29e24bbb76e05ebb547a2e78d2476d59dd3081edad817",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x9000",
+          "raw_off": "0x1000",
+          "raw_size": "0x9000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xb000",
+          "vsize": "0x1000",
+          "raw_off": "0xb000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "3299a266-15f0-4346-8318-716336736d3e",
+    "ui_name": "UsbDeviceDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x3488d0",
+    "ffs_size": "0xc042",
+    "depex_hex": "0608",
+    "file": "dxe/UsbDeviceDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 49152,
+      "sha256": "14c2809f4ae8b0f351d3cc3887bd5c13d99399ba35607f9fa260aefdfeefb95c",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x9000",
+          "raw_off": "0x1000",
+          "raw_size": "0x9000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xb000",
+          "vsize": "0x1000",
+          "raw_off": "0xb000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "cd823a4d-7dec-4531-ae5d-4134fa4127b8",
+    "ui_name": "UsbConfigDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x354918",
+    "ffs_size": "0xd076",
+    "depex_hex": "02690476b00c977a48a4b528db7b45cef102d0c7e5f439d2cb47aacd7f66ef76323802455c7a15b221c543ba7c822fee5fe599030308",
+    "file": "dxe/UsbConfigDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 53248,
+      "sha256": "32e466db49fb5fab11abaa5af92cae9f365e94c4ea6cd5cfd5b155da5c179e99",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xa000",
+          "raw_off": "0x1000",
+          "raw_size": "0xa000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xb000",
+          "vsize": "0x1000",
+          "raw_off": "0xb000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xc000",
+          "vsize": "0x1000",
+          "raw_off": "0xc000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "3adf8dda-1850-44c5-8c63-bb991849bc6f",
+    "ui_name": "HashDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x361990",
+    "ffs_size": "0x11030",
+    "depex_hex": null,
+    "file": "dxe/HashDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 69632,
+      "sha256": "f7b10f4d97c0568e86a78cbee24de2a85ac3c0b9b950518c6535f3447d2c04b8",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0xe000",
+          "raw_off": "0x1000",
+          "raw_size": "0xe000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xf000",
+          "vsize": "0x1000",
+          "raw_off": "0xf000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x10000",
+          "vsize": "0x1000",
+          "raw_off": "0x10000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "b0d3689e-11f8-43c6-8ece-023a29cec35b",
+    "ui_name": "RngDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x3729c0",
+    "ffs_size": "0x702e",
+    "depex_hex": null,
+    "file": "dxe/RngDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "0f75358fe9bcd356d7a1f4db64620e7a4c6249e48f911a02eb204e8fc13f0623",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "5a50aa81-c3ae-4608-a0e3-41a2e69baf94",
+    "ui_name": "QcomBds",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x3799f0",
+    "ffs_size": "0x1306c",
+    "depex_hex": "027469d90faa23dc4cb9cb98d17750322a0272c19fefb2a19346b3276d32fc41604202d7727e5850cc794f8209ca291fc1a10f030308",
+    "file": "dxe/QcomBds.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 77824,
+      "sha256": "7955f2cefea9d94d93f0ff9927a55e094aed4bc5f927e147e7ef0fa76a42748e",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x10000",
+          "raw_off": "0x1000",
+          "raw_size": "0x10000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x11000",
+          "vsize": "0x1000",
+          "raw_off": "0x11000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x12000",
+          "vsize": "0x1000",
+          "raw_off": "0x12000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "b003d837-44cc-b38b-7811-deb5ebbd74d8",
+    "ui_name": "QdssDxe",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x38ca60",
+    "ffs_size": "0xc038",
+    "depex_hex": "0608",
+    "file": "dxe/QdssDxe.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 49152,
+      "sha256": "05ec922bb574e7f37097b27c51b09145ba17e63f511af0eafd04ab14f05725c0",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x9000",
+          "raw_off": "0x1000",
+          "raw_size": "0x9000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xb000",
+          "vsize": "0x1000",
+          "raw_off": "0xb000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "2cc73155-a1f9-4c4b-88e2-caf9390e126a",
+    "ui_name": "Muic",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x398a98",
+    "ffs_size": "0xa052",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a30218ec9aadf07b09489e963012309f3df70308",
+    "file": "dxe/Muic.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 40960,
+      "sha256": "abc694a2f3ba49a34136f9f1e6d5d9e2e31b982da84fcae66da33af7136ff335",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x7000",
+          "raw_off": "0x1000",
+          "raw_size": "0x7000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x8000",
+          "vsize": "0x1000",
+          "raw_off": "0x8000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x9000",
+          "vsize": "0x1000",
+          "raw_off": "0x9000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "3c7596fa-0058-4496-a648-6d14be4023b2",
+    "ui_name": "Chg",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x3a2af0",
+    "ffs_size": "0xc050",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a30218ec9aadf07b09489e963012309f3df70308",
+    "file": "dxe/Chg.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 49152,
+      "sha256": "57924ff1bb0dd406f71adad50f9c8e26969d45478c08e049a2cd51e924531956",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x9000",
+          "raw_off": "0x1000",
+          "raw_size": "0x9000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0xa000",
+          "vsize": "0x1000",
+          "raw_off": "0xa000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0xb000",
+          "vsize": "0x1000",
+          "raw_off": "0xb000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "aa2e776d-8c9c-4268-998a-8b0a13bf0501",
+    "ui_name": "Vib",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x3aeb40",
+    "ffs_size": "0x8050",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a30218ec9aadf07b09489e963012309f3df70308",
+    "file": "dxe/Vib.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 32768,
+      "sha256": "2f00f0413952e39937a674971a283af749596ac561dbf8cabb3c459b8183d2f0",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x5000",
+          "raw_off": "0x1000",
+          "raw_size": "0x5000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x7000",
+          "vsize": "0x1000",
+          "raw_off": "0x7000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "6c3dbb2c-4354-4f5a-9e2f-40658db24402",
+    "ui_name": "NpaLdo",
+    "ffs_type": "0x7",
+    "ffs_offset": "0x3b6b90",
+    "ffs_size": "0x7056",
+    "depex_hex": "0242b937ae7f45914ca196d9669fd347a30218ec9aadf07b09489e963012309f3df70308",
+    "file": "dxe/NpaLdo.efi",
+    "pe": {
+      "machine": "0xaa64",
+      "image_base": "0x0",
+      "entry_point_rva": "0x1130",
+      "size": 28672,
+      "sha256": "04a9c965e07bb22e3463b5eb9935e366db67a7a6d14f084d41abda7d8fef2e92",
+      "sections": [
+        {
+          "name": ".text",
+          "vaddr": "0x1000",
+          "vsize": "0x4000",
+          "raw_off": "0x1000",
+          "raw_size": "0x4000"
+        },
+        {
+          "name": ".data",
+          "vaddr": "0x5000",
+          "vsize": "0x1000",
+          "raw_off": "0x5000",
+          "raw_size": "0x1000"
+        },
+        {
+          "name": ".reloc",
+          "vaddr": "0x6000",
+          "vsize": "0x1000",
+          "raw_off": "0x6000",
+          "raw_size": "0x1000"
+        }
+      ]
+    }
+  },
+  {
+    "guid": "a91d838e-a5fa-4138-825d-455e2303079e",
+    "ui_name": "BDS_Menu.cfg",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x3bdbe8",
+    "ffs_size": "0xb1d",
+    "depex_hex": null,
+    "file": "cfg/BDS_Menu.cfg"
+  },
+  {
+    "guid": "a91d838e-a5fa-4138-825d-455e23030794",
+    "ui_name": "logo1.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x3be708",
+    "ffs_size": "0x2466",
+    "depex_hex": null,
+    "file": "bmp/logo1.bmp"
+  },
+  {
+    "guid": "3e5584ed-05d4-4267-9048-0d47f76f4248",
+    "ui_name": "battery_symbol_Soc10.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x3c0b70",
+    "ffs_size": "0x10020",
+    "depex_hex": null,
+    "file": "bmp/battery_symbol_Soc10.bmp"
+  },
+  {
+    "guid": "4753e815-ddd8-402d-bf69-9b8c4eb7573e",
+    "ui_name": "battery_symbol_NoBattery.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x3d0b90",
+    "ffs_size": "0x1577c",
+    "depex_hex": null,
+    "file": "bmp/battery_symbol_NoBattery.bmp"
+  },
+  {
+    "guid": "03ded53e-becd-428f-9f79-5aba64c58445",
+    "ui_name": "battery_symbol_Nocharger.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x3e6310",
+    "ffs_size": "0x14144",
+    "depex_hex": null,
+    "file": "bmp/battery_symbol_Nocharger.bmp"
+  },
+  {
+    "guid": "8b86cd38-c772-4fcf-85aa-345b2b3c1ab4",
+    "ui_name": "battery_symbol_LowBatteryCharging.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x3fa458",
+    "ffs_size": "0x14154",
+    "depex_hex": null,
+    "file": "bmp/battery_symbol_LowBatteryCharging.bmp"
+  },
+  {
+    "guid": "3fd97907-93f1-4349-af3c-3b68b0a5e626",
+    "ui_name": "battery_symbol_LowBattery.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x40e5b0",
+    "ffs_size": "0x14144",
+    "depex_hex": null,
+    "file": "bmp/battery_symbol_LowBattery.bmp"
+  },
+  {
+    "guid": "e2ea5a4f-98bd-4203-ab49-399505ddfb7d",
+    "ui_name": "tsens_thermal_symbol.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x4226f8",
+    "ffs_size": "0x15774",
+    "depex_hex": null,
+    "file": "bmp/tsens_thermal_symbol.bmp"
+  },
+  {
+    "guid": "c72fb1a9-5527-4e13-bac4-f671d0330145",
+    "ui_name": "tsens_thermal_err_symbol.bmp",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x437e70",
+    "ffs_size": "0x1577c",
+    "depex_hex": null,
+    "file": "bmp/tsens_thermal_err_symbol.bmp"
+  },
+  {
+    "guid": "a1e235de-e825-4591-9623-c43175811826",
+    "ui_name": "SecParti.cfg",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x44d5f0",
+    "ffs_size": "0x11a1",
+    "depex_hex": null,
+    "file": "cfg/SecParti.cfg"
+  },
+  {
+    "guid": "f12a1f3d-4318-a006-5f7f-3faaf6dbb4b5",
+    "ui_name": "tracer_event.cfg",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x44e798",
+    "ffs_size": "0x5c7",
+    "depex_hex": null,
+    "file": "cfg/tracer_event.cfg"
+  },
+  {
+    "guid": "45fe4b7c-150c-45da-a021-4beb2048ec6f",
+    "ui_name": "QcomChargerCfg.cfg",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x44ed60",
+    "ffs_size": "0x24c7",
+    "depex_hex": null,
+    "file": "cfg/QcomChargerCfg.cfg"
+  },
+  {
+    "guid": "f780c779-dd7c-47cd-bd1a-5eb414c51704",
+    "ui_name": "BATTERY.PROVISION",
+    "ffs_type": "0x2",
+    "ffs_offset": "0x451228",
+    "ffs_size": "0x2e5b",
+    "depex_hex": null,
+    "file": "cfg/BATTERY.PROVISION"
+  }
+]

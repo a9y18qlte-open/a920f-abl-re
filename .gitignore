@@ -1,0 +1,19 @@
+# Binary firmware & unpacked images
+*.elf
+*.efi
+*.bin
+*.te
+*.bmp
+*.mbn
+*.lz4
+
+# Ghidra project databases & logs
+ghidra/proj_*
+ghidra/*.log
+
+# Large generated Ghidra C exports (regenerable via ghidra/scripts/ExportUefiAbl.java)
+decomp/
+
+# Python caches
+__pycache__/
+*.pyc

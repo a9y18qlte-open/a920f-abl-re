@@ -1,0 +1,170 @@
+{
+  "elf_class": "ELFCLASS32",
+  "elf_machine": "EM_ARM",
+  "elf_entry": "0x0",
+  "e_phoff": 52,
+  "e_phentsize": 32,
+  "e_phnum": 8,
+  "total_size": 242568,
+  "total_sha256": "6539213ec78f8282fd411eb505f0dd4de20b686ab39f2cf2978806f6468b4680",
+  "segments": [
+    {
+      "index": 0,
+      "type": "PT_NULL",
+      "offset": "0x0",
+      "vaddr": "0x0",
+      "paddr": "0x0",
+      "filesz": "0x134",
+      "memsz": "0x0",
+      "flags": "0x7000000",
+      "sha256": "95776a6bc66079432a38dd5d85bdf6b0a44d0caa979c0c2536f4917b376cae70"
+    },
+    {
+      "index": 1,
+      "type": "PT_NULL",
+      "offset": "0x1000",
+      "vaddr": "0x51000",
+      "paddr": "0x51000",
+      "filesz": "0x1a28",
+      "memsz": "0x2000",
+      "flags": "0x2200000",
+      "sha256": "68b5ad54e473bf8205677131522614042ff2831451459567ce189c60bf07b781"
+    },
+    {
+      "index": 2,
+      "type": "PT_LOAD",
+      "offset": "0x3000",
+      "vaddr": "0x0",
+      "paddr": "0x0",
+      "filesz": "0x1a986",
+      "memsz": "0x1a986",
+      "flags": "0x5",
+      "sha256": "71aafd54e17b7eb5632cad1c2cc6c7ee7c4eb97d77b6341dc1eab77982599b18"
+    },
+    {
+      "index": 3,
+      "type": "PT_LOAD",
+      "offset": "0x1d990",
+      "vaddr": "0x1b000",
+      "paddr": "0x1b000",
+      "filesz": "0x1a701",
+      "memsz": "0x32701",
+      "flags": "0x6",
+      "sha256": "19f95d0dc2fe2471e2c0f8ca73e2df5172a7f69eba6ca0c85c1b554a74ca50a1"
+    },
+    {
+      "index": 4,
+      "type": "PT_LOAD",
+      "offset": "0x38f00",
+      "vaddr": "0x4e000",
+      "paddr": "0x4e000",
+      "filesz": "0x84",
+      "memsz": "0x84",
+      "flags": "0x6",
+      "sha256": "9a722251fd1425651eaf3e6f548415452c020ca738b784fb4aaa391cf678238c"
+    },
+    {
+      "index": 5,
+      "type": "PT_LOAD",
+      "offset": "0x39f00",
+      "vaddr": "0x4f000",
+      "paddr": "0x4f000",
+      "filesz": "0x88",
+      "memsz": "0x88",
+      "flags": "0x6",
+      "sha256": "ae1ecd22768cf257ca414b1933abfc7256b141748e86ffd53481baf7ee87b027"
+    },
+    {
+      "index": 6,
+      "type": "PT_DYNAMIC",
+      "offset": "0x39f00",
+      "vaddr": "0x4f000",
+      "paddr": "0x4f000",
+      "filesz": "0x88",
+      "memsz": "0x88",
+      "flags": "0x6",
+      "sha256": "ae1ecd22768cf257ca414b1933abfc7256b141748e86ffd53481baf7ee87b027"
+    },
+    {
+      "index": 7,
+      "type": "PT_LOAD",
+      "offset": "0x3af00",
+      "vaddr": "0x50000",
+      "paddr": "0x50000",
+      "filesz": "0x288",
+      "memsz": "0x288",
+      "flags": "0x4",
+      "sha256": "05e578c390f5a2f471c9ae990bba2fff8c2d983129b5642f91049018817806f3"
+    }
+  ],
+  "mbn": {
+    "segment_offset": "0x1000",
+    "segment_size": "0x1a28",
+    "header_words_hex": [
+      "0x4",
+      "0x5",
+      "0x0",
+      "0x0",
+      "0x1a00",
+      "0x100",
+      "0xffffffff",
+      "0x100",
+      "0xffffffff",
+      "0x1800"
+    ],
+    "version": 5,
+    "code_size": "0x100",
+    "sig_size": "0x100",
+    "cert_chain_size": "0x1800",
+    "certs": [
+      {
+        "len": 1364,
+        "sha256": "11dd232397106c7f2a9dd246a5b6d1ababc30a81d78e9d8dd12c7c35bc34406e",
+        "subject": "C = US, CN = SecTools Test User, L = San Diego, O = SecTools, ST = California, OU = 01 000000000000000C SW_ID, OU = 02 3006000000200000 HW_ID, OU = 04 0020 OEM_ID, OU = 05 00000128 SW_SIZE, OU = 06 0000 MODEL_ID, OU = 07 0001 SHA256, OU = 03 0000000000000002 DEBUG, OU = 08 0000000000000888 APP_ID, OU = 13 0001 IN_USE_SOC_HW_VERSION",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "01",
+        "notBefore": "Aug 26 10:18:13 2022 GMT",
+        "notAfter": "Aug 21 10:18:13 2042 GMT",
+        "offset_in_seg1": "0x228"
+      },
+      {
+        "len": 1173,
+        "sha256": "5e3f0eb9e896314b9898c10c0f2cbf39751ede6203c6a4cf4dcb799474433703",
+        "subject": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "05",
+        "notBefore": "Sep 18 08:27:36 2018 GMT",
+        "notAfter": "Sep 13 08:27:36 2038 GMT",
+        "offset_in_seg1": "0x77c"
+      },
+      {
+        "len": 1165,
+        "sha256": "5cc39a5d2ee1f4f5f6e71139ada2509d6b680c253319130140ed9097bc9f9fc3",
+        "subject": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "D31E82F895DFA8C0",
+        "notBefore": "Sep 18 08:27:36 2018 GMT",
+        "notAfter": "Oct 18 08:27:36 2018 GMT",
+        "offset_in_seg1": "0xc11"
+      }
+    ]
+  },
+  "samsung_signer_footer": {
+    "offset": "0x3b188",
+    "size": 512,
+    "magic": "SignerVer02",
+    "signer_id": "55622970R",
+    "build_id": "A920FXXS7CVH1",
+    "tail_strings": [
+      "20220826192112",
+      "SM-A920F_EUR_XX_GBL0",
+      "SRPRI18A007",
+      "SRPRI18A007",
+      "bksecapp.mbn",
+      "MAh+",
+      "78^[5",
+      ",G7By"
+    ]
+  },
+  "symbols": []
+}

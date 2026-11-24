@@ -1,0 +1,412 @@
+[
+  {
+    "index": 0,
+    "guid": "d6a2cb7f-6a18-4e2f-b43b-9920a733700a",
+    "ui_name": "DxeCore"
+  },
+  {
+    "index": 1,
+    "guid": "90a49afd-422f-08ae-9611-e788d3804845",
+    "ui_name": "EnvDxe"
+  },
+  {
+    "index": 2,
+    "guid": "d93ce3d8-a7eb-4730-8c8e-cc466a9ecc3c",
+    "ui_name": "ReportStatusCodeRouterRuntimeDxe"
+  },
+  {
+    "index": 3,
+    "guid": "6c2004ef-4e0e-4be4-b14c-340eb4aa5891",
+    "ui_name": "StatusCodeHandlerRuntimeDxe"
+  },
+  {
+    "index": 4,
+    "guid": "b601f8c4-43b7-4784-95b1-f4226cb40cee",
+    "ui_name": "RuntimeDxe"
+  },
+  {
+    "index": 5,
+    "guid": "b8d9777e-d72a-451f-9bdb-bafb52a68415",
+    "ui_name": "ArmCpuDxe"
+  },
+  {
+    "index": 6,
+    "guid": "de371f7c-dec4-4d21-adf1-593abcc15882",
+    "ui_name": "ArmGicDxe"
+  },
+  {
+    "index": 7,
+    "guid": "49ea041e-6752-42ca-b0b1-7344fe2546b7",
+    "ui_name": "ArmTimerDxe"
+  },
+  {
+    "index": 8,
+    "guid": "f099d67f-71ae-4c36-b2a3-dceb0eb2b7d8",
+    "ui_name": "WatchdogTimer"
+  },
+  {
+    "index": 9,
+    "guid": "5e0eae60-eaed-4d75-b8bf-edbbaabc3f09",
+    "ui_name": "SecurityDxe"
+  },
+  {
+    "index": 10,
+    "guid": "c2f9a4f5-f7b4-43e7-ba99-5ea804cc103a",
+    "ui_name": "ASN1X509Dxe"
+  },
+  {
+    "index": 11,
+    "guid": "32c71e68-83a8-46ed-aed1-094e71b12057",
+    "ui_name": "SecRSADxe"
+  },
+  {
+    "index": 12,
+    "guid": "a25f5839-4d55-428f-8f0b-5ce1d565f53e",
+    "ui_name": "VerifiedBootDxe"
+  },
+  {
+    "index": 13,
+    "guid": "f541d663-4a48-40aa-aabf-ff158ccae34c",
+    "ui_name": "SmemDxe"
+  },
+  {
+    "index": 14,
+    "guid": "8e9bd160-b184-11df-94e2-0800200c9a66",
+    "ui_name": "DALSys"
+  },
+  {
+    "index": 15,
+    "guid": "af9763a2-033b-4109-8e17-56a98d380c92",
+    "ui_name": "HWIODxeDriver"
+  },
+  {
+    "index": 16,
+    "guid": "10e193df-9966-44e7-b17c-59dd831e20fc",
+    "ui_name": "ChipInfo"
+  },
+  {
+    "index": 17,
+    "guid": "b105211b-bbbd-4add-a3b0-d1cf4a52154c",
+    "ui_name": "PlatformInfoDxeDriver"
+  },
+  {
+    "index": 18,
+    "guid": "4c6e0267-c77d-410d-8100-1495911a989d",
+    "ui_name": "MetronomeDxe"
+  },
+  {
+    "index": 19,
+    "guid": "7942a7eb-b7d5-4e2e-b908-831e4de55b58",
+    "ui_name": "GlinkDxe"
+  },
+  {
+    "index": 20,
+    "guid": "e43128a8-8692-42b6-8afa-676158578d18",
+    "ui_name": "ULogDxe"
+  },
+  {
+    "index": 21,
+    "guid": "cb29f4d1-7f37-4692-a416-93e82e219711",
+    "ui_name": "NpaDxe"
+  },
+  {
+    "index": 22,
+    "guid": "4db5dea6-5302-4d1a-8a82-677a683b0d29",
+    "ui_name": "ClockDxe"
+  },
+  {
+    "index": 23,
+    "guid": "6b38f7b4-ad98-40e9-9093-aca2b5a253c4",
+    "ui_name": "DiskIoDxe"
+  },
+  {
+    "index": 24,
+    "guid": "1fa1f39e-feff-4aae-bd7b-38a070a3b609",
+    "ui_name": "PartitionDxe"
+  },
+  {
+    "index": 25,
+    "guid": "f10f76db-42c1-533f-34a8-69be24653110",
+    "ui_name": "SdccDxe"
+  },
+  {
+    "index": 26,
+    "guid": "0d35cd8e-97ea-4f9a-96af-0f0d89f76567",
+    "ui_name": "UFSDxe"
+  },
+  {
+    "index": 27,
+    "guid": "961578fe-b6b7-44c3-af35-6bc705cd2b1f",
+    "ui_name": "Fat"
+  },
+  {
+    "index": 28,
+    "guid": "cd3bafb6-50fb-4fe8-8e4e-ab74d2c1a600",
+    "ui_name": "EnglishDxe"
+  },
+  {
+    "index": 29,
+    "guid": "907125c0-a5f1-11e3-a3fe-a3198b49350c",
+    "ui_name": "FvSimpleFileSystem"
+  },
+  {
+    "index": 30,
+    "guid": "b003d837-44cc-b38b-7811-deb5ebbd74d8",
+    "ui_name": "QdssDxe"
+  },
+  {
+    "index": 31,
+    "guid": "02b01ad5-7e59-43e8-a6d8-238180613a5a",
+    "ui_name": "EmuVariableRuntimeDxe"
+  },
+  {
+    "index": 32,
+    "guid": "65b852df-355e-4946-9808-cc7edb9beaa6",
+    "ui_name": null
+  },
+  {
+    "index": 33,
+    "guid": "37795ba0-e1cf-4ed5-bd8b-16df6bcb1e1a",
+    "ui_name": "EmbeddedMonotonicCounter"
+  },
+  {
+    "index": 34,
+    "guid": "3ae17db7-3cc5-4b89-9304-9549211057ef",
+    "ui_name": "ResetRuntimeDxe"
+  },
+  {
+    "index": 35,
+    "guid": "b336f62d-4135-4a55-ae4e-4971bbf0885d",
+    "ui_name": "RealTimeClock"
+  },
+  {
+    "index": 36,
+    "guid": "79e4a61c-ed73-4312-94fe-e3e7563362a9",
+    "ui_name": "PrintDxe"
+  },
+  {
+    "index": 37,
+    "guid": "9b680fce-ad6b-4f3a-b60b-f59899003443",
+    "ui_name": "DevicePathDxe"
+  },
+  {
+    "index": 38,
+    "guid": "42857f0a-13f2-4b21-8a23-53d3f714b840",
+    "ui_name": "CapsuleRuntimeDxe"
+  },
+  {
+    "index": 39,
+    "guid": "348c4d62-bfbd-4882-9ece-c80bb1c4783b",
+    "ui_name": "HiiDatabase"
+  },
+  {
+    "index": 40,
+    "guid": "ed15ffd5-bc96-4107-9118-95366600188e",
+    "ui_name": "FontDxe"
+  },
+  {
+    "index": 41,
+    "guid": "5a50aa81-c3ae-4608-a0e3-41a2e69baf94",
+    "ui_name": "QcomBds"
+  },
+  {
+    "index": 42,
+    "guid": "8681cc5a-0df6-441e-b4b8-e915c538f067",
+    "ui_name": "DALTLMM"
+  },
+  {
+    "index": 43,
+    "guid": "04de8591-d2b3-4077-bbbe-b12070094eb6",
+    "ui_name": "I2C"
+  },
+  {
+    "index": 44,
+    "guid": "2a7b4bef-80cd-49e1-b473-374ba4d673fc",
+    "ui_name": "SPMI"
+  },
+  {
+    "index": 45,
+    "guid": "7a32bd23-f735-4f57-aa1a-447d2fe3be0d",
+    "ui_name": "SPI"
+  },
+  {
+    "index": 46,
+    "guid": "5776232e-082d-4b75-9a0e-fe1d13f7a5d9",
+    "ui_name": "PmicDxe"
+  },
+  {
+    "index": 47,
+    "guid": "5a5cb8ca-9382-4e0c-b383-77fb517cd9eb",
+    "ui_name": "AdcDxe"
+  },
+  {
+    "index": 48,
+    "guid": "4bce7f36-428e-4393-99e3-7e0844404dba",
+    "ui_name": null
+  },
+  {
+    "index": 49,
+    "guid": "94f8a6a7-dc34-4101-88c1-99179cceae83",
+    "ui_name": "UsbfnDwc3Dxe"
+  },
+  {
+    "index": 50,
+    "guid": "beb12bee-f6e1-11e1-9fb8-6c626de4aeb1",
+    "ui_name": null
+  },
+  {
+    "index": 51,
+    "guid": "b7f50e91-a759-412c-ade4-dcd03e7f7c28",
+    "ui_name": null
+  },
+  {
+    "index": 52,
+    "guid": "240612b7-a063-11d4-9a3a-0090273fc14d",
+    "ui_name": null
+  },
+  {
+    "index": 53,
+    "guid": "2d2e62cf-9ecf-43b7-8219-94e7fc713dfe",
+    "ui_name": null
+  },
+  {
+    "index": 54,
+    "guid": "9fb4b4a7-42c0-4bcd-8540-9bcc6711f83e",
+    "ui_name": null
+  },
+  {
+    "index": 55,
+    "guid": "cd823a4d-7dec-4531-ae5d-4134fa4127b8",
+    "ui_name": "UsbConfigDxe"
+  },
+  {
+    "index": 56,
+    "guid": "09f5eed9-4181-a0e5-92b9-58b187a220e2",
+    "ui_name": null
+  },
+  {
+    "index": 57,
+    "guid": "e6239a25-45ee-d1a7-5eaa-e69e2560e6e2",
+    "ui_name": null
+  },
+  {
+    "index": 58,
+    "guid": "857a8741-0eec-43bd-9482-27d14ed47d72",
+    "ui_name": "SimpleTextInOutSerial"
+  },
+  {
+    "index": 59,
+    "guid": "51ccf399-4fdf-4e55-a45b-e123f84d456a",
+    "ui_name": "ConPlatformDxe"
+  },
+  {
+    "index": 60,
+    "guid": "408edcec-cf6d-477c-a5a8-b4844e3de281",
+    "ui_name": "ConSplitterDxe"
+  },
+  {
+    "index": 61,
+    "guid": "cccb0c28-4b24-11d5-9a5a-0090273fc14d",
+    "ui_name": "GraphicsConsoleDxe"
+  },
+  {
+    "index": 62,
+    "guid": "5bd181db-0487-4f1a-ae73-820e165611b3",
+    "ui_name": "ButtonsDxe"
+  },
+  {
+    "index": 63,
+    "guid": "aa091c85-503d-4333-b2e8-e836e2927a6e",
+    "ui_name": null
+  },
+  {
+    "index": 64,
+    "guid": "f09ad92e-485c-9cdb-3e05-3385c38f94cc",
+    "ui_name": "TsensDxe"
+  },
+  {
+    "index": 65,
+    "guid": "2cc73155-a1f9-4c4b-88e2-caf9390e126a",
+    "ui_name": "Muic"
+  },
+  {
+    "index": 66,
+    "guid": "3c7596fa-0058-4496-a648-6d14be4023b2",
+    "ui_name": "Chg"
+  },
+  {
+    "index": 67,
+    "guid": "4138022f-06c7-4f79-9c94-7e33b511a4e7",
+    "ui_name": "DisplayDxe"
+  },
+  {
+    "index": 68,
+    "guid": "6925fad3-e243-4b69-ad61-3f978c8abc60",
+    "ui_name": "TzDxe"
+  },
+  {
+    "index": 69,
+    "guid": "f09ad92e-4e91-490f-ab99-e69939b840b2",
+    "ui_name": "LimitsDxe"
+  },
+  {
+    "index": 70,
+    "guid": "409d636e-8dbb-46df-ae8f-d8d69f0a5a2f",
+    "ui_name": "MdtpDxe"
+  },
+  {
+    "index": 71,
+    "guid": "f8622d80-f271-4505-9487-8d25bbafd7d8",
+    "ui_name": null
+  },
+  {
+    "index": 72,
+    "guid": "9622e42c-8e38-4a08-9e8f-54f784652f6b",
+    "ui_name": null
+  },
+  {
+    "index": 73,
+    "guid": "07598dfc-d5ec-4f00-8897-ab10426cb644",
+    "ui_name": null
+  },
+  {
+    "index": 74,
+    "guid": "3adf8dda-1850-44c5-8c63-bb991849bc6f",
+    "ui_name": "HashDxe"
+  },
+  {
+    "index": 75,
+    "guid": "b0d3689e-11f8-43c6-8ece-023a29cec35b",
+    "ui_name": "RngDxe"
+  },
+  {
+    "index": 76,
+    "guid": "5246dcd6-1968-4bc6-b50e-620a0b629dc3",
+    "ui_name": null
+  },
+  {
+    "index": 77,
+    "guid": "8fdadcd4-c723-4ded-ab9e-aee4f3e0c2a2",
+    "ui_name": null
+  },
+  {
+    "index": 78,
+    "guid": "88abf42e-efa7-4d72-a9c8-8b29acdcf64f",
+    "ui_name": "MpPowerDxe"
+  },
+  {
+    "index": 79,
+    "guid": "50a15b6f-e3a9-4192-9640-369cb367c4de",
+    "ui_name": null
+  },
+  {
+    "index": 80,
+    "guid": "d63c059a-b0b0-4044-89c3-15958df2d427",
+    "ui_name": null
+  },
+  {
+    "index": 81,
+    "guid": "ce044919-3000-4998-82af-ddb4e17c6b66",
+    "ui_name": null
+  }
+]

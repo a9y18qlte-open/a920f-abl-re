@@ -1,0 +1,213 @@
+{
+  "elf_machine": "EM_ARM",
+  "elf_class": "ELFCLASS64",
+  "elf_entry": "0x9fa00000",
+  "total_size": 2109952,
+  "total_sha256": "54bb167978dd9a971d796b610ee0be47995e18aabcdbeb96504f66ab02fe7006",
+  "segments": [
+    {
+      "index": 0,
+      "type": "PT_NULL",
+      "offset": "0x0",
+      "vaddr": "0x0",
+      "paddr": "0x0",
+      "filesz": "0xe8",
+      "memsz": "0x0",
+      "flags": "0x7000000",
+      "sha256": "d73d7ebdc76c3258f629031384c649ef8538a2aa98627e9a0fcda81a2472afdd"
+    },
+    {
+      "index": 1,
+      "type": "PT_NULL",
+      "offset": "0x1000",
+      "vaddr": "0x9fc00000",
+      "paddr": "0x9fc00000",
+      "filesz": "0x1988",
+      "memsz": "0x2000",
+      "flags": "0x2200000",
+      "sha256": "2fa7ccb08b2c69115c7a4a3cd4b7a153e602fcc672d8794256713d4535dab5b4"
+    },
+    {
+      "index": 2,
+      "type": "PT_LOAD",
+      "offset": "0x3000",
+      "vaddr": "0x9fa00000",
+      "paddr": "0x9fa00000",
+      "filesz": "0x200000",
+      "memsz": "0x200000",
+      "flags": "0x7",
+      "sha256": "06d5164935033b795f1c3969c4379d7632fc2573c5c9e6e6b79ed32f5c6c2ac7"
+    }
+  ],
+  "mbn": {
+    "segment_offset": "0x1000",
+    "segment_size": "0x1988",
+    "header_words_hex": [
+      "0x0",
+      "0x5",
+      "0x0",
+      "0x0",
+      "0x1960",
+      "0x60",
+      "0xffffffff",
+      "0x100",
+      "0xffffffff",
+      "0x1800"
+    ],
+    "version": 5,
+    "code_size": "0x60",
+    "sig_size": "0x100",
+    "cert_chain_size": "0x1800",
+    "segment_hashes_sha256": [
+      "d73d7ebdc76c3258f629031384c649ef8538a2aa98627e9a0fcda81a2472afdd",
+      "0000000000000000000000000000000000000000000000000000000000000000",
+      "06d5164935033b795f1c3969c4379d7632fc2573c5c9e6e6b79ed32f5c6c2ac7"
+    ],
+    "certs": [
+      {
+        "len": 1327,
+        "sha256": "122aa0c608708364da19af5215273c3e9e3bb9ea783aace06fc451ef2bd586c0",
+        "subject": "C = US, CN = SecTools Test User, L = San Diego, O = SecTools, ST = California, OU = 01 000000070000001C SW_ID, OU = 02 3006000000200000 HW_ID, OU = 04 0020 OEM_ID, OU = 05 00000088 SW_SIZE, OU = 06 0000 MODEL_ID, OU = 07 0001 SHA256, OU = 03 0000000000000002 DEBUG, OU = 13 0001 IN_USE_SOC_HW_VERSION",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "01",
+        "notBefore": "Aug 26 10:18:46 2022 GMT",
+        "notAfter": "Aug 21 10:18:46 2042 GMT",
+        "offset_in_seg1": "0x188"
+      },
+      {
+        "len": 1173,
+        "sha256": "5e3f0eb9e896314b9898c10c0f2cbf39751ede6203c6a4cf4dcb799474433703",
+        "subject": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "05",
+        "notBefore": "Sep 18 08:27:36 2018 GMT",
+        "notAfter": "Sep 13 08:27:36 2038 GMT",
+        "offset_in_seg1": "0x6b7"
+      },
+      {
+        "len": 1165,
+        "sha256": "5cc39a5d2ee1f4f5f6e71139ada2509d6b680c253319130140ed9097bc9f9fc3",
+        "subject": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "issuer": "C = KR, ST = South Korea, L = Suwon City, O = Samsung Corporation, OU = DMC, CN = Samsung Root CA cert, emailAddress = m.security@samsung.com",
+        "serial": "D31E82F895DFA8C0",
+        "notBefore": "Sep 18 08:27:36 2018 GMT",
+        "notAfter": "Oct 18 08:27:36 2018 GMT",
+        "offset_in_seg1": "0xb4c"
+      }
+    ]
+  },
+  "samsung_signer_footer": {
+    "offset": "0x203000",
+    "size": 512,
+    "magic": "SignerVer02",
+    "signer_id": "55622970R",
+    "build_id": "A920FXXS7CVH1",
+    "tail_strings": [
+      "20220826192111",
+      "SM-A920F_EUR_XX_GBL0",
+      "SRPRI18A007",
+      "SRPRI18A007",
+      "abl.elf",
+      "|T(?",
+      "F?Yi",
+      "lKO "
+    ],
+    "raw_hex_00_80": "5369676e65725665723032000000000035353632323937305200000000000000413932304658585337435648310000000000000000000000000000000000000032303232303832363139323131310000534d2d41393230465f4555525f58585f47424c3000000000000000000000000053525052493138413030370000000000"
+  },
+  "outer_fv": {
+    "offset": "0x3000",
+    "length": "0x200000",
+    "files": [
+      {
+        "guid": "9e21fd93-9c72-4c15-8c4b-e77f1db2d792",
+        "type": "0xb",
+        "size": "0xba6a8",
+        "sections": [
+          {
+            "type": "0x2",
+            "size": "0xba690",
+            "compression": "LZMA",
+            "decompressed_size": 2650376
+          }
+        ]
+      }
+    ]
+  },
+  "inner_fv": {
+    "length": "0x287100",
+    "modules": [
+      {
+        "guid": "aba3b456-5469-414a-9f79-47cecbd7c04e",
+        "ui_name": "Odin",
+        "type": "0x9",
+        "ffs_size": "0x11b02c",
+        "pe": {
+          "machine": "0xaa64",
+          "image_base": "0x0",
+          "entry_point_rva": "0x1000",
+          "size": 1159168,
+          "sha256": "96a77ec846ee258002b721ccb94e629f298862010b8f0890f59940dd0a19f5c8",
+          "sections": [
+            {
+              "name": ".text",
+              "vaddr": "0x1000",
+              "vsize": "0x77000",
+              "raw_off": "0x1000",
+              "raw_size": "0x77000"
+            },
+            {
+              "name": ".data",
+              "vaddr": "0x78000",
+              "vsize": "0xa0000",
+              "raw_off": "0x78000",
+              "raw_size": "0xa0000"
+            },
+            {
+              "name": ".reloc",
+              "vaddr": "0x118000",
+              "vsize": "0x3000",
+              "raw_off": "0x118000",
+              "raw_size": "0x3000"
+            }
+          ]
+        }
+      },
+      {
+        "guid": "f536d559-459f-48fa-8bbc-43b554ecae8d",
+        "ui_name": "LinuxLoader",
+        "type": "0x9",
+        "ffs_size": "0x16c038",
+        "pe": {
+          "machine": "0xaa64",
+          "image_base": "0x0",
+          "entry_point_rva": "0x1000",
+          "size": 1490944,
+          "sha256": "a67caa9a8d7d4b7f8cfdd5bd847b252b384e77b77bf3c7b770d1366559245b25",
+          "sections": [
+            {
+              "name": ".text",
+              "vaddr": "0x1000",
+              "vsize": "0x9e000",
+              "raw_off": "0x1000",
+              "raw_size": "0x9e000"
+            },
+            {
+              "name": ".data",
+              "vaddr": "0x9f000",
+              "vsize": "0xca000",
+              "raw_off": "0x9f000",
+              "raw_size": "0xca000"
+            },
+            {
+              "name": ".reloc",
+              "vaddr": "0x169000",
+              "vsize": "0x3000",
+              "raw_off": "0x169000",
+              "raw_size": "0x3000"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

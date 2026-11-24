@@ -1,0 +1,1325 @@
+[
+  {
+    "guid": "9e21fd93-9c72-4c15-8c4b-e77f1db2d792",
+    "name": "AblCompressedFvGuid",
+    "bytes_le_hex": "93fd219e729c154c8c4be77f1db2d792",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "eb9d2d30-2d88-11d3-9a16-0090273fc14d",
+    "name": "EfiAcpi10TableGuid",
+    "bytes_le_hex": "302d9deb882dd3119a160090273fc14d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8868e871-e4f1-11d3-bc22-0080c73c8881",
+    "name": "EfiAcpi20TableGuid",
+    "bytes_le_hex": "71e86888f1e4d311bc220080c73c8881",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a77b2472-e282-4e9f-a245-c2c0e27bbbc1",
+    "name": "EfiBlockIo2Protocol",
+    "bytes_le_hex": "72247ba782e29f4ea245c2c0e27bbbc1",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a77b2472-e282-4e9f-a245-c2c0e27bbcc1",
+    "name": "EfiBlockIo2Protocol",
+    "bytes_le_hex": "72247ba782e29f4ea245c2c0e27bbcc1",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "964e5b21-6459-11d2-8e39-00a0c969723b",
+    "name": "EfiBlockIoProtocol",
+    "bytes_le_hex": "215b4e965964d2118e3900a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "eb704011-1402-11d3-8e77-00a0c969723b",
+    "name": "EfiCpuArchProtocol",
+    "bytes_le_hex": "114070eb0214d3118e7700a0c969723b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "03c4e603-ac28-11d3-9a2d-0090273fc14d",
+    "name": "EfiDebugPortProtocol",
+    "bytes_le_hex": "03e6c40328acd3119a2d0090273fc14d",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "09576e91-6d3f-11d2-8e39-00a0c969723b",
+    "name": "EfiDevicePathProtocol",
+    "bytes_le_hex": "916e57093f6dd2118e3900a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "8b843e20-8132-4852-90cc-551a4e4a7f1c",
+    "name": "EfiDevicePathToTextProtocol",
+    "bytes_le_hex": "203e848b3281524890cc551a4e4a7f1c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "ce345171-ba0b-11d2-8e4f-00a0c969723b",
+    "name": "EfiDiskIoProtocol",
+    "bytes_le_hex": "715134ce0bbad2118e4f00a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5b446ed1-e30b-4faa-871a-3654eca36080",
+    "name": "EfiDxeServicesTableGuid",
+    "bytes_le_hex": "d16e445b0be3aa4f871a3654eca36080",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "05ad34ba-6f02-4214-952e-4da0398e2bb9",
+    "name": "EfiDxeServicesTableLibGuid",
+    "bytes_le_hex": "ba34ad05026f1442952e4da0398e2bb9",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "95a9a93e-a86e-4926-aaef-9918e772d987",
+    "name": "EfiEraseBlockProtocol",
+    "bytes_le_hex": "3ea9a9956ea82649aaef9918e772d987",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "09576e92-6d3f-11d2-8e39-00a0c969723b",
+    "name": "EfiFileInfoId",
+    "bytes_le_hex": "926e57093f6dd2118e3900a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "09576e93-6d3f-11d2-8e39-00a0c969723b",
+    "name": "EfiFileSystemVolumeLabelId",
+    "bytes_le_hex": "936e57093f6dd2118e3900a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8c8ce578-8a3d-4f1c-9935-896185c32dd3",
+    "name": "EfiFirmwareFileSystem2Guid",
+    "bytes_le_hex": "78e58c8c3d8a1c4f9935896185c32dd3",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "220e73b6-6bdb-4413-8405-b974b108619a",
+    "name": "EfiFirmwareVolume2Protocol",
+    "bytes_le_hex": "b6730e22db6b13448405b974b108619a",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8f644fa9-e850-4db1-9ce2-0b44698e8da4",
+    "name": "EfiFirmwareVolumeBlock2Protocol",
+    "bytes_le_hex": "a94f648f50e8b14d9ce20b44698e8da4",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8be4df61-93ca-11d2-aa0d-00e098032b8c",
+    "name": "EfiGlobalVariable",
+    "bytes_le_hex": "61dfe48bca93d211aa0d00e098032b8c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "d3b36f2c-d551-11d4-9a46-0090273fc14d",
+    "name": "EfiGraphicsConsoleControl",
+    "bytes_le_hex": "2c6fb3d351d5d4119a460090273fc14d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "9042a9de-23dc-4a38-96fb-7aded080516a",
+    "name": "EfiGraphicsOutputProtocol",
+    "bytes_le_hex": "dea94290dc23384a96fb7aded080516a",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "da836f8d-217f-4ca0-99c2-1c4a1ca5d7dc",
+    "name": "EfiHash2Protocol",
+    "bytes_le_hex": "8d6f83da7f21a04c99c21c4a1ca5d7dc",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "55b1d734-c5e1-49db-9647-b16afb0e305b",
+    "name": "EfiHash2Protocol_Qcom",
+    "bytes_le_hex": "34d7b155e1c5db499647b16afb0e305b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "c5b9c74a-6d72-4719-99ab-c59f199091eb",
+    "name": "EfiHash2ServiceBindingProtocol",
+    "bytes_le_hex": "4ac7b9c5726d194799abc59f199091eb",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "2ae9d80f-3fb2-4095-b7b1-e93157b946b6",
+    "name": "EfiHashAlgorithmSha1OrSec2Guid",
+    "bytes_le_hex": "0fd8e92ab23f9540b7b1e93157b946b6",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "51aa59de-fdf2-4ea3-bc63-875fb7842ee9",
+    "name": "EfiHashAlgorithmSha256Guid",
+    "bytes_le_hex": "de59aa51f2fda34ebc63875fb7842ee9",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "587e72d7-cc50-4f79-8209-ca291fc1a10f",
+    "name": "EfiHiiConfigRoutingProtocol",
+    "bytes_le_hex": "d7727e5850cc794f8209ca291fc1a10f",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "ef9fc172-a1b2-4693-b327-6d32fc416042",
+    "name": "EfiHiiDatabaseProtocol",
+    "bytes_le_hex": "72c19fefb2a19346b3276d32fc416042",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "e9ca4775-8657-47fc-97e7-7ed65a084324",
+    "name": "EfiHiiFontProtocol",
+    "bytes_le_hex": "7547cae95786fc4797e77ed65a084324",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "4c8a2451-c207-405b-9694-99ea13251341",
+    "name": "EfiHiiFrameworkGuid",
+    "bytes_le_hex": "51248a4c07c25b40969499ea13251341",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "31a6406a-6bdf-4e46-b2a2-ebaa89c40920",
+    "name": "EfiHiiImageProtocol",
+    "bytes_le_hex": "6a40a631df6b464eb2a2ebaa89c40920",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "0fd96974-23aa-4cdc-b9cb-98d17750322a",
+    "name": "EfiHiiStringProtocol",
+    "bytes_le_hex": "7469d90faa23dc4cb9cb98d17750322a",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "7739f24c-93d7-11d4-9a3a-0090273fc14d",
+    "name": "EfiHobListGuid",
+    "bytes_le_hex": "4cf23977d793d4119a3a0090273fc14d",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "56ec3091-954c-11d2-8e3f-00a0c969723b",
+    "name": "EfiLoadFileProtocol",
+    "bytes_le_hex": "9130ec564c95d2118e3f00a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "bc62157e-3e33-4fec-9920-2d3b36d750df",
+    "name": "EfiLoadedImageDevicePathProtocol",
+    "bytes_le_hex": "7e1562bc333eec4f99202d3b36d750df",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5b1b31a1-9562-11d2-8e3f-00a0c969723b",
+    "name": "EfiLoadedImageProtocol",
+    "bytes_le_hex": "a1311b5b6295d2118e3f00a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "85c1f7d2-bce6-4f31-8f4d-d37e03d05eaa",
+    "name": "EfiMemCardInfoProtocol",
+    "bytes_le_hex": "d2f7c185e6bc314f8f4dd37e03d05eaa",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "335984bd-e805-409a-b8f8-d27ece5ff7a6",
+    "name": "EfiMemoryTypeInformationGuid",
+    "bytes_le_hex": "bd84593305e89a40b8f8d27ece5ff7a6",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "024dee41-33e7-11d3-9d69-0008c781f39f",
+    "name": "EfiPartTypeLegacyMbr",
+    "bytes_le_hex": "41ee4d02e733d3119d690008c781f39f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+    "name": "EfiPartTypeSystemPart",
+    "bytes_le_hex": "28732ac11ff8d211ba4b00a0c93ec93b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8cf2f62c-bc96-488c-a84f-ff80e76e248b",
+    "name": "EfiPartitionInfoProtocol",
+    "bytes_le_hex": "2cf6f28c96bc8c48a84fff80e76e248b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "0b913f6e-5862-4e77-8394-11df08a665f5",
+    "name": "EfiPartitionRecordGuid",
+    "bytes_le_hex": "6e3f910b6258774e839411df08a665f5",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "fe2555be-d716-4686-b9d0-79db5921b70d",
+    "name": "EfiPartitionRecordProtocol",
+    "bytes_le_hex": "be5525fe16d78646b9d079db5921b70d",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "ebd0a0a2-b9e5-4433-87c0-68b6b72699c7",
+    "name": "EfiPartitionTypeBasicData",
+    "bytes_le_hex": "a2a0d0ebe5b9334487c068b6b72699c7",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "6848de61-eb61-4def-9a8e-3817cbeb8f1c",
+    "name": "EfiPartitionTypeGuidProtocol",
+    "bytes_le_hex": "61de486861ebef4d9a8e3817cbeb8f1c",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "d719b2cb-3d3a-4596-a3bc-dad00e67656f",
+    "name": "EfiPartitionTypeUserData",
+    "bytes_le_hex": "cbb219d73a3d9645a3bcdad00e67656f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "9a4e9246-d553-11d5-87e2-00062945c3b9",
+    "name": "EfiPrintLibGuid",
+    "bytes_le_hex": "46924e9a53d5d51187e200062945c3b9",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "7a34b5c4-b08d-441c-9188-46eb24d23c62",
+    "name": "EfiQcomSdccConfigProtocol",
+    "bytes_le_hex": "c4b5347a8db01c44918846eb24d23c62",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "d2b2b828-0826-48a7-b3df-983c006024f0",
+    "name": "EfiReportStatusCodeProtocol",
+    "bytes_le_hex": "28b8b2d22608a748b3df983c006024f0",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "3152bca5-eade-433d-862e-c01cdc291f44",
+    "name": "EfiRngProtocol",
+    "bytes_le_hex": "a5bc5231deea3d43862ec01cdc291f44",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "d3c6eb21-77a9-4a62-bfaa-7d8c22923899",
+    "name": "EfiSdMmcPassThruProtocol",
+    "bytes_le_hex": "21ebc6d3a977624abfaa7d8c22923899",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "bb25cf6f-f1d4-11d2-9a0c-0090273fc1fd",
+    "name": "EfiSerialIoProtocol",
+    "bytes_le_hex": "6fcf25bbd4f1d2119a0c0090273fc1fd",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "964e5b22-6459-11d2-8e39-00a0c969723b",
+    "name": "EfiSimpleFileSystemProtocol",
+    "bytes_le_hex": "225b4e965964d2118e3900a0c969723b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "387477c1-69c7-11d2-8e39-00a0c969723b",
+    "name": "EfiSimpleTextInProtocol",
+    "bytes_le_hex": "c1777438c769d2118e3900a0c969723b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "dd9e7534-7762-4698-8c14-f58517a625aa",
+    "name": "EfiSimpleTextInputExProtocol",
+    "bytes_le_hex": "34759edd627798468c14f58517a625aa",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "387477c2-69c7-11d2-8e39-00a0c969723b",
+    "name": "EfiSimpleTextOutProtocol",
+    "bytes_le_hex": "c2777438c769d2118e3900a0c969723b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f2fd1544-9794-4a2c-992e-e5bbcf20e394",
+    "name": "EfiSmbios3TableGuid",
+    "bytes_le_hex": "4415fdf294972c4a992ee5bbcf20e394",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "eb9d2d31-2d88-11d3-9a16-0090273fc14d",
+    "name": "EfiSmbiosTableGuid",
+    "bytes_le_hex": "312d9deb882dd3119a160090273fc14d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "59d1c24f-50f1-401a-b101-f33e0daed443",
+    "name": "EfiStatusCodeRuntimeProtocol",
+    "bytes_le_hex": "4fc2d159f1501a40b101f33e0daed443",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "951727db-4321-4c76-a06b-87a6a1929206",
+    "name": "EfiStorageSecurityCommandProtocol",
+    "bytes_le_hex": "db2717952143764ca06b87a6a1929206",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f541796d-a62e-4954-a775-9584f61b9c54",
+    "name": "EfiUsbDeviceProtocol",
+    "bytes_le_hex": "6d7941f52ea65449a7759584f61b9c54",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "2b2f68d6-0cd2-44cf-8e8b-bba20b1b5b75",
+    "name": "EfiUsbIoProtocol",
+    "bytes_le_hex": "d6682f2bd20ccf448e8bbba20b1b5b75",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "32d2963a-fe5d-4f30-b633-6e5dc55803cc",
+    "name": "EfiUsbfnIoProtocol",
+    "bytes_le_hex": "3a96d2325dfe304fb6336e5dc55803cc",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "ee4e5898-3914-4259-9d6e-dc7bd79403cf",
+    "name": "LzmaCustomDecompressGuid",
+    "bytes_le_hex": "98584eee143959429d6edc7bd79403cf",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "24b09ebe-58a8-4f63-bfeb-30c8c338b96b",
+    "name": "QcomAdcProtocol",
+    "bytes_le_hex": "be9eb024a858634fbfeb30c8c338b96b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "c7f6b7d4-1e98-4b75-91f2-1827d03f14a5",
+    "name": "QcomBootModeGuid",
+    "bytes_le_hex": "d4b7f6c7981e754b91f21827d03f14a5",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "6edc8a6d-2663-43cd-90ff-4621ffd10df5",
+    "name": "QcomChargerProtocol",
+    "bytes_le_hex": "6d8adc6e6326cd4390ff4621ffd10df5",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b0760469-970c-487a-a4b5-28db7b45cef1",
+    "name": "QcomChipInfoProtocol",
+    "bytes_le_hex": "690476b00c977a48a4b528db7b45cef1",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "f4321a6e-c9d8-4a1f-b7a2-7c976b74b8c9",
+    "name": "QcomDisplayPwrCtrlProtocol",
+    "bytes_le_hex": "6e1a32f4d8c91f4ab7a27c976b74b8c9",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "1e28a9ba-54b1-4a93-9b45-56c8b4daa55c",
+    "name": "QcomEmmcPonProtocol",
+    "bytes_le_hex": "baa9281eb154934a9b4556c8b4daa55c",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "d35dc019-3eab-4655-ba9a-734a8d8b9847",
+    "name": "QcomEmmcWpProtocol",
+    "bytes_le_hex": "19c05dd3ab3e5546ba9a734a8d8b9847",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "1d301fe9-be79-4353-91c2-d23bc959ae0c",
+    "name": "QcomGzipSectionGuid",
+    "bytes_le_hex": "e91f301d79be534391c2d23bc959ae0c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f57f73ed-0afc-4723-9374-2cebc0198ef9",
+    "name": "QcomKernelModeSwitchProtocol",
+    "bytes_le_hex": "ed737ff5fc0a234793742cebc0198ef9",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "1b1f62b5-63a1-43c3-b596-2a19d56139c4",
+    "name": "QcomMmuProtocol",
+    "bytes_le_hex": "b5621f1ba163c343b5962a19d56139c4",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "d68edce2-a314-457b-962a-1d99bbfcbbfb",
+    "name": "QcomNandPartiGuidProtocol",
+    "bytes_le_hex": "e2dc8ed614a37b45962a1d99bbfcbbfb",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "157a5c45-21b2-43c5-ba7c-822fee5fe599",
+    "name": "QcomPlatformInfoProtocol",
+    "bytes_le_hex": "455c7a15b221c543ba7c822fee5fe599",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "4e2e30a4-52d7-4f86-93bf-7f95c5b821df",
+    "name": "QcomPmicGpioProtocol",
+    "bytes_le_hex": "a4302e4ed752864f93bf7f95c5b821df",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "04c2c1c2-9f4e-4636-8d47-2478cf9c367c",
+    "name": "QcomPmicLpgProtocol",
+    "bytes_le_hex": "c2c1c2044e9f36468d472478cf9c367c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "97044b58-fea4-4ad0-9d0b-e417d60f11a1",
+    "name": "QcomPmicPwrOnProtocol",
+    "bytes_le_hex": "584b0497a4fed04a9d0be417d60f11a1",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "6e73a0c0-25bf-4fa2-a816-fb4a5dc8b5e8",
+    "name": "QcomPmicRgbLedProtocol",
+    "bytes_le_hex": "c0a0736ebf25a24fa816fb4a5dc8b5e8",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "fcbedc3e-d2a6-4234-9be5-c5ea93d1f392",
+    "name": "QcomPmicRtcProtocol",
+    "bytes_le_hex": "3edcbefca6d234429be5c5ea93d1f392",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "4684800a-2755-4edc-b443-7f8ceb3239d3",
+    "name": "QcomPmicVersionProtocol",
+    "bytes_le_hex": "0a8084465527dc4eb4437f8ceb3239d3",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "c4d35e5a-d07a-4483-b42d-a6bfeb047b19",
+    "name": "QcomPmicWledProtocol",
+    "bytes_le_hex": "5a5ed3c47ad08344b42da6bfeb047b19",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a74862ce-680f-4fe1-a311-df41f4030391",
+    "name": "QcomQseecomProtocol",
+    "bytes_le_hex": "ce6248a70f68e14fa311df41f4030391",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "5172ffb5-4253-7d51-c641-a701f973103c",
+    "name": "QcomRamPartitionProtocol",
+    "bytes_le_hex": "b5ff72515342517dc641a701f973103c",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a022155a-4828-4535-a499-11f15240b91b",
+    "name": "QcomResetReasonProtocol",
+    "bytes_le_hex": "5a1522a028483545a49911f15240b91b",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "e0ba9b98-dd90-44aa-99c8-3a6a9155068f",
+    "name": "QcomRuntimeDebugOrHob",
+    "bytes_le_hex": "989bbae090ddaa4499c83a6a9155068f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "77ed108d-8524-4b8b-9d2e-34987aecb9c1",
+    "name": "QcomScmProtocol",
+    "bytes_le_hex": "8d10ed7724858b4b9d2e34987aecb9c1",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "4acf98f6-26fa-44d2-8132-282f2d19a4c5",
+    "name": "QcomSdccUfsGuid_4acf",
+    "bytes_le_hex": "f698cf4afa26d2448132282f2d19a4c5",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "4ba1d05f-088e-483f-a97e-b19b9ccf59b0",
+    "name": "QcomSdccUfsGuid_4ba1",
+    "bytes_le_hex": "5fd0a14b8e083f48a97eb19b9ccf59b0",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "8598155f-34de-415c-8b55-843e3322d36f",
+    "name": "QcomSdccUfsGuid_8598",
+    "bytes_le_hex": "5f159885de345c418b55843e3322d36f",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "f4e5c7d0-d239-47cb-aacd-7f66ef763238",
+    "name": "QcomSmemProtocol",
+    "bytes_le_hex": "d0c7e5f439d2cb47aacd7f66ef763238",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "ae1cdd2b-b59a-413a-8dff-56d2fc63b7e0",
+    "name": "QcomStorageWpProtocol",
+    "bytes_le_hex": "2bdd1cae9ab53a418dff56d2fc63b7e0",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "ad9aec18-7bf0-4809-9e96-3012309f3df7",
+    "name": "QcomTlmmProtocol",
+    "bytes_le_hex": "18ec9aadf07b09489e963012309f3df7",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a60e2a4a-56d3-4f88-8b2f-2a49c9648e6f",
+    "name": "QcomTlmmProtocol",
+    "bytes_le_hex": "4a2a0ea6d356884f8b2f2a49c9648e6f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "882f8c2b-9646-435f-8de5-f208ff80c1bd",
+    "name": "QcomTokenSpaceGuid",
+    "bytes_le_hex": "2b8c2f8846965f438de5f208ff80c1bd",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "a83f3e60-c54e-4b3b-8e2d-d49635061501",
+    "name": "QcomTokenSpaceGuid",
+    "bytes_le_hex": "603e3fa84ec53b4b8e2dd49635061501",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b811d2a7-4232-47ef-a393-08f5db2b5a82",
+    "name": "QcomUefiSecAppProtocol",
+    "bytes_le_hex": "a7d211b83242ef47a39308f5db2b5a82",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "83360384-6b2c-414b-8290-bb9e48db7901",
+    "name": "QcomUefiVarProtocol",
+    "bytes_le_hex": "840336832c6b4b418290bb9e48db7901",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "556d3e76-0d7b-48ea-89f9-7a0eb286796d",
+    "name": "QcomUfsBootLun",
+    "bytes_le_hex": "763e6d557b0dea4889f97a0eb286796d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8b0d8671-f542-4ee8-a70c-95f5524ae117",
+    "name": "QcomUfsSsuProtocol",
+    "bytes_le_hex": "71860d8b42f5e84ea70c95f5524ae117",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "d9d9ce48-44b8-494f-8e3e-2a3b927dc6c1",
+    "name": "QcomUsbDeviceProtocol",
+    "bytes_le_hex": "48ced9d9b8444f498e3e2a3b927dc6c1",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "1c0cffce-fc8d-4e44-8c78-9c9e5b530d36",
+    "name": "QcomUsbInitEventGuid",
+    "bytes_le_hex": "ceff0c1c8dfc444e8c789c9e5b530d36",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "529d3f93-e8e9-4e73-b1e1-bdf6a9d50113",
+    "name": "QcomUsbfnChgSrvProtocol",
+    "bytes_le_hex": "933f9d52e9e8734eb1e1bdf6a9d50113",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8e5eff91-21b6-47d3-af2b-c15a01e020ec",
+    "name": "QcomVerifiedBootProtocol",
+    "bytes_le_hex": "91ff5e8eb621d347af2bc15a01e020ec",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "3c7596fa-0058-4496-a648-6d14be4023b2",
+    "name": "SamsungChargerProtocol",
+    "bytes_le_hex": "fa96753c58009644a6486d14be4023b2",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f536d559-459f-48fa-8bbc-43b554ecae8d",
+    "name": "SamsungLinuxLoaderAppGuid",
+    "bytes_le_hex": "59d536f59f45fa488bbc43b554ecae8d",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "2cc73155-a1f9-4c4b-88e2-caf9390e126a",
+    "name": "SamsungMuicProtocol",
+    "bytes_le_hex": "5531c72cf9a14b4c88e2caf9390e126a",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "6c3dbb2c-4354-4f5a-9e2f-40658db24402",
+    "name": "SamsungNpaLdoProtocol",
+    "bytes_le_hex": "2cbb3d6c54435a4f9e2f40658db24402",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "aba3b456-5469-414a-9f79-47cecbd7c04e",
+    "name": "SamsungOdinAppGuid",
+    "bytes_le_hex": "56b4a3ab69544a419f7947cecbd7c04e",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": true
+  },
+  {
+    "guid": "aa2e776d-8c9c-4268-998a-8b0a13bf0501",
+    "name": "SamsungVibratorProtocol",
+    "bytes_le_hex": "6d772eaa9c8c6842998a8b0a13bf0501",
+    "in_F_LinuxLoader": true,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "c2f9a4f5-f7b4-43e7-ba99-5ea804cc103a",
+    "name": "XblDxe_ASN1X509Dxe",
+    "bytes_le_hex": "f5a4f9c2b4f7e743ba995ea804cc103a",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5a5cb8ca-9382-4e0c-b383-77fb517cd9eb",
+    "name": "XblDxe_AdcDxe",
+    "bytes_le_hex": "cab85c5a82930c4eb38377fb517cd9eb",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b8d9777e-d72a-451f-9bdb-bafb52a68415",
+    "name": "XblDxe_ArmCpuDxe",
+    "bytes_le_hex": "7e77d9b82ad71f459bdbbafb52a68415",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "de371f7c-dec4-4d21-adf1-593abcc15882",
+    "name": "XblDxe_ArmGicDxe",
+    "bytes_le_hex": "7c1f37dec4de214dadf1593abcc15882",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "49ea041e-6752-42ca-b0b1-7344fe2546b7",
+    "name": "XblDxe_ArmTimerDxe",
+    "bytes_le_hex": "1e04ea495267ca42b0b17344fe2546b7",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f780c779-dd7c-47cd-bd1a-5eb414c51704",
+    "name": "XblDxe_BATTERY_PROVISION",
+    "bytes_le_hex": "79c780f77cddcd47bd1a5eb414c51704",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a91d838e-a5fa-4138-825d-455e2303079e",
+    "name": "XblDxe_BDS_Menu_cfg",
+    "bytes_le_hex": "8e831da9faa53841825d455e2303079e",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5bd181db-0487-4f1a-ae73-820e165611b3",
+    "name": "XblDxe_ButtonsDxe",
+    "bytes_le_hex": "db81d15b87041a4fae73820e165611b3",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "42857f0a-13f2-4b21-8a23-53d3f714b840",
+    "name": "XblDxe_CapsuleRuntimeDxe",
+    "bytes_le_hex": "0a7f8542f213214b8a2353d3f714b840",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "10e193df-9966-44e7-b17c-59dd831e20fc",
+    "name": "XblDxe_ChipInfo",
+    "bytes_le_hex": "df93e1106699e744b17c59dd831e20fc",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "4db5dea6-5302-4d1a-8a82-677a683b0d29",
+    "name": "XblDxe_ClockDxe",
+    "bytes_le_hex": "a6deb54d02531a4d8a82677a683b0d29",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "51ccf399-4fdf-4e55-a45b-e123f84d456a",
+    "name": "XblDxe_ConPlatformDxe",
+    "bytes_le_hex": "99f3cc51df4f554ea45be123f84d456a",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "408edcec-cf6d-477c-a5a8-b4844e3de281",
+    "name": "XblDxe_ConSplitterDxe",
+    "bytes_le_hex": "ecdc8e406dcf7c47a5a8b4844e3de281",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8e9bd160-b184-11df-94e2-0800200c9a66",
+    "name": "XblDxe_DALSys",
+    "bytes_le_hex": "60d19b8e84b1df1194e20800200c9a66",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8681cc5a-0df6-441e-b4b8-e915c538f067",
+    "name": "XblDxe_DALTLMM",
+    "bytes_le_hex": "5acc8186f60d1e44b4b8e915c538f067",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "9b680fce-ad6b-4f3a-b60b-f59899003443",
+    "name": "XblDxe_DevicePathDxe",
+    "bytes_le_hex": "ce0f689b6bad3a4fb60bf59899003443",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "6b38f7b4-ad98-40e9-9093-aca2b5a253c4",
+    "name": "XblDxe_DiskIoDxe",
+    "bytes_le_hex": "b4f7386b98ade9409093aca2b5a253c4",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "4138022f-06c7-4f79-9c94-7e33b511a4e7",
+    "name": "XblDxe_DisplayDxe",
+    "bytes_le_hex": "2f023841c706794f9c947e33b511a4e7",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "d6a2cb7f-6a18-4e2f-b43b-9920a733700a",
+    "name": "XblDxe_DxeCore",
+    "bytes_le_hex": "7fcba2d6186a2f4eb43b9920a733700a",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "37795ba0-e1cf-4ed5-bd8b-16df6bcb1e1a",
+    "name": "XblDxe_EmbeddedMonotonicCounter",
+    "bytes_le_hex": "a05b7937cfe1d54ebd8b16df6bcb1e1a",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "02b01ad5-7e59-43e8-a6d8-238180613a5a",
+    "name": "XblDxe_EmuVariableRuntimeDxe",
+    "bytes_le_hex": "d51ab002597ee843a6d8238180613a5a",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "cd3bafb6-50fb-4fe8-8e4e-ab74d2c1a600",
+    "name": "XblDxe_EnglishDxe",
+    "bytes_le_hex": "b6af3bcdfb50e84f8e4eab74d2c1a600",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "90a49afd-422f-08ae-9611-e788d3804845",
+    "name": "XblDxe_EnvDxe",
+    "bytes_le_hex": "fd9aa4902f42ae089611e788d3804845",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "961578fe-b6b7-44c3-af35-6bc705cd2b1f",
+    "name": "XblDxe_Fat",
+    "bytes_le_hex": "fe781596b7b6c344af356bc705cd2b1f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "ed15ffd5-bc96-4107-9118-95366600188e",
+    "name": "XblDxe_FontDxe",
+    "bytes_le_hex": "d5ff15ed96bc0741911895366600188e",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "907125c0-a5f1-11e3-a3fe-a3198b49350c",
+    "name": "XblDxe_FvSimpleFileSystem",
+    "bytes_le_hex": "c0257190f1a5e311a3fea3198b49350c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "7942a7eb-b7d5-4e2e-b908-831e4de55b58",
+    "name": "XblDxe_GlinkDxe",
+    "bytes_le_hex": "eba74279d5b72e4eb908831e4de55b58",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "cccb0c28-4b24-11d5-9a5a-0090273fc14d",
+    "name": "XblDxe_GraphicsConsoleDxe",
+    "bytes_le_hex": "280ccbcc244bd5119a5a0090273fc14d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "af9763a2-033b-4109-8e17-56a98d380c92",
+    "name": "XblDxe_HWIODxeDriver",
+    "bytes_le_hex": "a26397af3b0309418e1756a98d380c92",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "3adf8dda-1850-44c5-8c63-bb991849bc6f",
+    "name": "XblDxe_HashDxe",
+    "bytes_le_hex": "da8ddf3a5018c5448c63bb991849bc6f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "348c4d62-bfbd-4882-9ece-c80bb1c4783b",
+    "name": "XblDxe_HiiDatabase",
+    "bytes_le_hex": "624d8c34bdbf82489ecec80bb1c4783b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "04de8591-d2b3-4077-bbbe-b12070094eb6",
+    "name": "XblDxe_I2C",
+    "bytes_le_hex": "9185de04b3d27740bbbeb12070094eb6",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f09ad92e-4e91-490f-ab99-e69939b840b2",
+    "name": "XblDxe_LimitsDxe",
+    "bytes_le_hex": "2ed99af0914e0f49ab99e69939b840b2",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "409d636e-8dbb-46df-ae8f-d8d69f0a5a2f",
+    "name": "XblDxe_MdtpDxe",
+    "bytes_le_hex": "6e639d40bb8ddf46ae8fd8d69f0a5a2f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "4c6e0267-c77d-410d-8100-1495911a989d",
+    "name": "XblDxe_MetronomeDxe",
+    "bytes_le_hex": "67026e4c7dc70d4181001495911a989d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "88abf42e-efa7-4d72-a9c8-8b29acdcf64f",
+    "name": "XblDxe_MpPowerDxe",
+    "bytes_le_hex": "2ef4ab88a7ef724da9c88b29acdcf64f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "cb29f4d1-7f37-4692-a416-93e82e219711",
+    "name": "XblDxe_NpaDxe",
+    "bytes_le_hex": "d1f429cb377f9246a41693e82e219711",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "1fa1f39e-feff-4aae-bd7b-38a070a3b609",
+    "name": "XblDxe_PartitionDxe",
+    "bytes_le_hex": "9ef3a11ffffeae4abd7b38a070a3b609",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b105211b-bbbd-4add-a3b0-d1cf4a52154c",
+    "name": "XblDxe_PlatformInfoDxeDriver",
+    "bytes_le_hex": "1b2105b1bdbbdd4aa3b0d1cf4a52154c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5776232e-082d-4b75-9a0e-fe1d13f7a5d9",
+    "name": "XblDxe_PmicDxe",
+    "bytes_le_hex": "2e2376572d08754b9a0efe1d13f7a5d9",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "79e4a61c-ed73-4312-94fe-e3e7563362a9",
+    "name": "XblDxe_PrintDxe",
+    "bytes_le_hex": "1ca6e47973ed124394fee3e7563362a9",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5a50aa81-c3ae-4608-a0e3-41a2e69baf94",
+    "name": "XblDxe_QcomBds",
+    "bytes_le_hex": "81aa505aaec30846a0e341a2e69baf94",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "45fe4b7c-150c-45da-a021-4beb2048ec6f",
+    "name": "XblDxe_QcomChargerCfg_cfg",
+    "bytes_le_hex": "7c4bfe450c15da45a0214beb2048ec6f",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b003d837-44cc-b38b-7811-deb5ebbd74d8",
+    "name": "XblDxe_QdssDxe",
+    "bytes_le_hex": "37d803b0cc448bb37811deb5ebbd74d8",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b336f62d-4135-4a55-ae4e-4971bbf0885d",
+    "name": "XblDxe_RealTimeClock",
+    "bytes_le_hex": "2df636b33541554aae4e4971bbf0885d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "d93ce3d8-a7eb-4730-8c8e-cc466a9ecc3c",
+    "name": "XblDxe_ReportStatusCodeRouterRuntimeDxe",
+    "bytes_le_hex": "d8e33cd9eba730478c8ecc466a9ecc3c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "3ae17db7-3cc5-4b89-9304-9549211057ef",
+    "name": "XblDxe_ResetRuntimeDxe",
+    "bytes_le_hex": "b77de13ac53c894b93049549211057ef",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b0d3689e-11f8-43c6-8ece-023a29cec35b",
+    "name": "XblDxe_RngDxe",
+    "bytes_le_hex": "9e68d3b0f811c6438ece023a29cec35b",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "b601f8c4-43b7-4784-95b1-f4226cb40cee",
+    "name": "XblDxe_RuntimeDxe",
+    "bytes_le_hex": "c4f801b6b743844795b1f4226cb40cee",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "7a32bd23-f735-4f57-aa1a-447d2fe3be0d",
+    "name": "XblDxe_SPI",
+    "bytes_le_hex": "23bd327a35f7574faa1a447d2fe3be0d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "2a7b4bef-80cd-49e1-b473-374ba4d673fc",
+    "name": "XblDxe_SPMI",
+    "bytes_le_hex": "ef4b7b2acd80e149b473374ba4d673fc",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f10f76db-42c1-533f-34a8-69be24653110",
+    "name": "XblDxe_SdccDxe",
+    "bytes_le_hex": "db760ff1c1423f5334a869be24653110",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a1e235de-e825-4591-9623-c43175811826",
+    "name": "XblDxe_SecParti_cfg",
+    "bytes_le_hex": "de35e2a125e891459623c43175811826",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "32c71e68-83a8-46ed-aed1-094e71b12057",
+    "name": "XblDxe_SecRSADxe",
+    "bytes_le_hex": "681ec732a883ed46aed1094e71b12057",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5e0eae60-eaed-4d75-b8bf-edbbaabc3f09",
+    "name": "XblDxe_SecurityDxe",
+    "bytes_le_hex": "60ae0e5eedea754db8bfedbbaabc3f09",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "857a8741-0eec-43bd-9482-27d14ed47d72",
+    "name": "XblDxe_SimpleTextInOutSerial",
+    "bytes_le_hex": "41877a85ec0ebd43948227d14ed47d72",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f541d663-4a48-40aa-aabf-ff158ccae34c",
+    "name": "XblDxe_SmemDxe",
+    "bytes_le_hex": "63d641f5484aaa40aabfff158ccae34c",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "6c2004ef-4e0e-4be4-b14c-340eb4aa5891",
+    "name": "XblDxe_StatusCodeHandlerRuntimeDxe",
+    "bytes_le_hex": "ef04206c0e4ee44bb14c340eb4aa5891",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f09ad92e-485c-9cdb-3e05-3385c38f94cc",
+    "name": "XblDxe_TsensDxe",
+    "bytes_le_hex": "2ed99af05c48db9c3e053385c38f94cc",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "6925fad3-e243-4b69-ad61-3f978c8abc60",
+    "name": "XblDxe_TzDxe",
+    "bytes_le_hex": "d3fa256943e2694bad613f978c8abc60",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "0d35cd8e-97ea-4f9a-96af-0f0d89f76567",
+    "name": "XblDxe_UFSDxe",
+    "bytes_le_hex": "8ecd350dea979a4f96af0f0d89f76567",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "e43128a8-8692-42b6-8afa-676158578d18",
+    "name": "XblDxe_ULogDxe",
+    "bytes_le_hex": "a82831e49286b6428afa676158578d18",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "cd823a4d-7dec-4531-ae5d-4134fa4127b8",
+    "name": "XblDxe_UsbConfigDxe",
+    "bytes_le_hex": "4d3a82cdec7d3145ae5d4134fa4127b8",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "3299a266-15f0-4346-8318-716336736d3e",
+    "name": "XblDxe_UsbDeviceDxe",
+    "bytes_le_hex": "66a29932f01546438318716336736d3e",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "5af77f10-90df-4e7e-8325-a17ec09d5443",
+    "name": "XblDxe_UsbMsdDxe",
+    "bytes_le_hex": "107ff75adf907e4e8325a17ec09d5443",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "94f8a6a7-dc34-4101-88c1-99179cceae83",
+    "name": "XblDxe_UsbfnDwc3Dxe",
+    "bytes_le_hex": "a7a6f89434dc014188c199179cceae83",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a25f5839-4d55-428f-8f0b-5ce1d565f53e",
+    "name": "XblDxe_VerifiedBootDxe",
+    "bytes_le_hex": "39585fa2554d8f428f0b5ce1d565f53e",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f099d67f-71ae-4c36-b2a3-dceb0eb2b7d8",
+    "name": "XblDxe_WatchdogTimer",
+    "bytes_le_hex": "7fd699f0ae71364cb2a3dceb0eb2b7d8",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "8b86cd38-c772-4fcf-85aa-345b2b3c1ab4",
+    "name": "XblDxe_battery_symbol_LowBatteryCharging_bmp",
+    "bytes_le_hex": "38cd868b72c7cf4f85aa345b2b3c1ab4",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "3fd97907-93f1-4349-af3c-3b68b0a5e626",
+    "name": "XblDxe_battery_symbol_LowBattery_bmp",
+    "bytes_le_hex": "0779d93ff1934943af3c3b68b0a5e626",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "4753e815-ddd8-402d-bf69-9b8c4eb7573e",
+    "name": "XblDxe_battery_symbol_NoBattery_bmp",
+    "bytes_le_hex": "15e85347d8dd2d40bf699b8c4eb7573e",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "03ded53e-becd-428f-9f79-5aba64c58445",
+    "name": "XblDxe_battery_symbol_Nocharger_bmp",
+    "bytes_le_hex": "3ed5de03cdbe8f429f795aba64c58445",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "3e5584ed-05d4-4267-9048-0d47f76f4248",
+    "name": "XblDxe_battery_symbol_Soc10_bmp",
+    "bytes_le_hex": "ed84553ed405674290480d47f76f4248",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "a91d838e-a5fa-4138-825d-455e23030794",
+    "name": "XblDxe_logo1_bmp",
+    "bytes_le_hex": "8e831da9faa53841825d455e23030794",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "f12a1f3d-4318-a006-5f7f-3faaf6dbb4b5",
+    "name": "XblDxe_tracer_event_cfg",
+    "bytes_le_hex": "3d1f2af1184306a05f7f3faaf6dbb4b5",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "c72fb1a9-5527-4e13-bac4-f671d0330145",
+    "name": "XblDxe_tsens_thermal_err_symbol_bmp",
+    "bytes_le_hex": "a9b12fc72755134ebac4f671d0330145",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  },
+  {
+    "guid": "e2ea5a4f-98bd-4203-ab49-399505ddfb7d",
+    "name": "XblDxe_tsens_thermal_symbol_bmp",
+    "bytes_le_hex": "4f5aeae2bd980342ab49399505ddfb7d",
+    "in_F_LinuxLoader": false,
+    "in_F_Odin": false
+  }
+]
